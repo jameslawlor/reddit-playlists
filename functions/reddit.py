@@ -1,9 +1,6 @@
-from praw import Reddit
 import re
 import logging
 import pandas as pd
-import os
-import datetime
 
 logging.getLogger().setLevel(logging.INFO)
 
@@ -105,5 +102,5 @@ if __name__ == "__main__":
         date=datetime.datetime.now()
     )
     data_folder = "data"
-    output_location = os.path.join(".", data_folder, filename)
+    output_location = os.path.join("..", data_folder, filename)
     write_dict_to_csv(subreddits_and_genres_trimmed, output_location)

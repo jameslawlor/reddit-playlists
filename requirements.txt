@@ -2,7 +2,6 @@ certifi==2021.10.8
 cfgv==3.3.1
 charset-normalizer==2.0.12
 distlib==0.3.4
-filelock==3.5.1
 identify==2.4.10
 idna==3.3
 nodeenv==1.6.0
