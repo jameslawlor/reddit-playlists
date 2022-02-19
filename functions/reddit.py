@@ -5,7 +5,7 @@ import pandas as pd
 logging.getLogger().setLevel(logging.INFO)
 
 
-def get_wikipage() -> list:
+def get_wikipage(reddit_instance) -> list:
     wikipage = (
         reddit_instance.subreddit("Music")
         .wiki["musicsubreddits"]
@@ -14,13 +14,9 @@ def get_wikipage() -> list:
     return wikipage
 
 
-def trim_wikipage(wikipage) -> list:
-
-    genre_regex = "##.*"
-    subreddit_regex = ".*/r/.*"
-
-    genre_section_start_regex = "#Subreddits by genre.*"
-    genre_section_end_regex = "#Multi-genre & community subreddits.*"
+def trim_wikipage(
+    wikipage: list, genre_section_start_regex: str, genre_section_end_regex: str
+) -> list:
 
     genre_section_start_ix = [
         ix
@@ -37,19 +33,27 @@ def trim_wikipage(wikipage) -> list:
     return wikipage[genre_section_start_ix + 1 : genre_section_end_ix]
 
 
-def get_subreddits_and_genres(reddit_instance) -> dict:
+def get_subreddit_genre_mapping(
+    reddit_instance,
+    genre_section_start_regex,
+    genre_section_end_regex,
+    genre_regex,
+    subreddit_regex,
+) -> dict:
     """
     Parses list of genre subreddits from /r/Music wiki https://www.reddit.com/r/Music/wiki/musicsubreddits/
     """
 
-    wikipage = get_wikipage()
-    trimmed_wikipage = trim_wikipage()
+    wikipage = get_wikipage(reddit_instance)
+    trimmed_wikipage = trim_wikipage(
+        wikipage, genre_section_start_regex, genre_section_end_regex
+    )
 
     subreddit_genre_mappings = {}
 
     logging.info("Getting genres and subreddits from /r/Music wiki")
 
-    for line in wikipage_trimmed:
+    for line in trimmed_wikipage:
         if re.search(genre_regex, line):
             current_genre = line.replace("##", "")
         elif re.search(subreddit_regex, line):
@@ -64,7 +68,10 @@ def get_subreddits_and_genres(reddit_instance) -> dict:
 
 
 def get_subreddit_subscriber_count(
-    reddit_instance: object, subreddits_and_genres: dict, subscriber_min_count=10000
+    reddit_instance: object,
+    subreddits_and_genres: dict,
+    subscriber_min_count: int,
+    test_mode: bool,
 ) -> dict:
 
     logging.info(
@@ -73,7 +80,12 @@ def get_subreddit_subscriber_count(
 
     subreddits_and_genres_to_output = {}
 
-    for (subreddit, values) in list(subreddits_and_genres.items())[:5]:
+    if test_mode:
+        list_of_subreddits_and_genres = list(subreddits_and_genres.items())[:5]
+    else:
+        list_of_subreddits_and_genres = list(subreddits_and_genres.items())
+
+    for (subreddit, values) in list_of_subreddits_and_genres:
         subscriber_count = reddit_instance.subreddit(subreddit).subscribers
         genre = values["genre"]
         if subscriber_count >= subscriber_min_count:
@@ -101,18 +113,3 @@ def write_dict_to_csv(dict, write_path):
     df.index.name = "subreddit"
     logging.info(f"output df head\n {df.head()}")
     df.to_csv(write_path)
-
-
-if __name__ == "__main__":
-    reddit_instance = Reddit("bot1")
-    subreddits_and_genres = get_subreddits_and_genres(reddit_instance)
-    subreddits_and_genres_trimmed = get_subreddit_subscriber_count(
-        reddit_instance, subreddits_and_genres
-    )
-
-    filename = "subreddits-status-{date:%Y-%m-%d_%H:%M:%S}.csv".format(
-        date=datetime.datetime.now()
-    )
-    data_folder = "data"
-    output_location = os.path.join("..", data_folder, filename)
-    write_dict_to_csv(subreddits_and_genres_trimmed, output_location)
