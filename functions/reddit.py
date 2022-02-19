@@ -1,41 +1,50 @@
-from praw import Reddit
 import re
 import logging
 import pandas as pd
-import os
-import datetime
 
 logging.getLogger().setLevel(logging.INFO)
 
 
-def get_subreddits_and_genres(reddit_instance) -> dict:
-    """
-    Parses list of genre subreddits from /r/Music wiki https://www.reddit.com/r/Music/wiki/musicsubreddits/
-    """
+def get_wikipage() -> list:
     wikipage = (
         reddit_instance.subreddit("Music")
         .wiki["musicsubreddits"]
         .content_md.splitlines()
     )
+    return wikipage
+
+
+def trim_wikipage(wikipage) -> list:
+
+    genre_regex = "##.*"
+    subreddit_regex = ".*/r/.*"
 
     genre_section_start_regex = "#Subreddits by genre.*"
+    genre_section_end_regex = "#Multi-genre & community subreddits.*"
+
     genre_section_start_ix = [
         ix
         for ix, line in enumerate(wikipage)
         if re.search(genre_section_start_regex, line)
     ][0]
 
-    genre_section_end_regex = "#Multi-genre & community subreddits.*"
     genre_section_end_ix = [
         ix
         for ix, line in enumerate(wikipage)
         if re.search(genre_section_end_regex, line)
     ][0]
 
-    wikipage_trimmed = wikipage[genre_section_start_ix + 1 : genre_section_end_ix]
+    return wikipage[genre_section_start_ix + 1 : genre_section_end_ix]
 
-    genre_regex = "##.*"
-    subreddit_regex = ".*/r/.*"
+
+def get_subreddits_and_genres(reddit_instance) -> dict:
+    """
+    Parses list of genre subreddits from /r/Music wiki https://www.reddit.com/r/Music/wiki/musicsubreddits/
+    """
+
+    wikipage = get_wikipage()
+    trimmed_wikipage = trim_wikipage()
+
     subreddit_genre_mappings = {}
 
     logging.info("Getting genres and subreddits from /r/Music wiki")
@@ -105,5 +114,5 @@ if __name__ == "__main__":
         date=datetime.datetime.now()
     )
     data_folder = "data"
-    output_location = os.path.join(".", data_folder, filename)
+    output_location = os.path.join("..", data_folder, filename)
     write_dict_to_csv(subreddits_and_genres_trimmed, output_location)
