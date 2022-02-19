@@ -1,3 +1,4 @@
+pandas==1.4.1
 praw==7.5.0
 prawcore==2.3.0
 pre-commit==2.17.0
