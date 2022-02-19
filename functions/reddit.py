@@ -33,6 +33,24 @@ def trim_wikipage(
     return wikipage[genre_section_start_ix + 1 : genre_section_end_ix]
 
 
+def parse_wikipage(trimmed_wikipage, genre_regex, subreddit_regex):
+    subreddit_genre_mappings = {}
+
+    logging.info("Getting genres and subreddits from /r/Music wiki")
+
+    for line in trimmed_wikipage:
+        if re.search(genre_regex, line):
+            current_genre = line.replace("##", "")
+        elif re.search(subreddit_regex, line):
+            subreddit = line.split("/r/")[1].split(" ")[0]
+            subreddit_genre_mappings[subreddit] = {"genre": current_genre}
+        else:
+            pass
+
+    logging.info("Finished getting genres and subreddits")
+    return subreddit_genre_mappings
+
+
 def get_subreddit_genre_mapping(
     reddit_instance,
     genre_section_start_regex,
@@ -48,22 +66,9 @@ def get_subreddit_genre_mapping(
     trimmed_wikipage = trim_wikipage(
         wikipage, genre_section_start_regex, genre_section_end_regex
     )
-
-    subreddit_genre_mappings = {}
-
-    logging.info("Getting genres and subreddits from /r/Music wiki")
-
-    for line in trimmed_wikipage:
-        if re.search(genre_regex, line):
-            current_genre = line.replace("##", "")
-        elif re.search(subreddit_regex, line):
-            subreddit = line.split("/r/")[1].split(" ")[0]
-            subreddit_genre_mappings[subreddit] = {"genre": current_genre}
-        else:
-            pass
-
-    logging.info("Finished getting genres and subreddits")
-
+    subreddit_genre_mappings = parse_wikipage(
+        trimmed_wikipage, genre_regex, subreddit_regex
+    )
     return subreddit_genre_mappings
 
 
