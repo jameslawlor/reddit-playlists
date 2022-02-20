@@ -8,3 +8,4 @@ six==1.16.0
 toml==0.10.2
 urllib3==1.26.8
 virtualenv==20.13.1
+spotipy==2.19.0
