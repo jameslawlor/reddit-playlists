@@ -3,6 +3,7 @@ from functions.reddit import (
     get_subreddit_subscriber_count,
     write_dict_to_csv,
 )
+from functions.spotipy import get_spotipy_client
 from praw import Reddit
 import datetime
 import os
@@ -35,3 +36,15 @@ def get_subreddits_and_genres(
         filename = filename_format.format(date=datetime.datetime.now())
         output_location = os.path.join(data_folder, filename)
         write_dict_to_csv(subreddits_and_genres_trimmed, output_location)
+
+
+def create_playlists(
+    genres_whitelist,
+    subreddit_blacklist,
+    playlist_base_str,
+    input_dir,
+    input_file,
+    output_dir,
+):
+    reddit_instance = Reddit("bot1")
+    spotipy = get_spotipy_client()

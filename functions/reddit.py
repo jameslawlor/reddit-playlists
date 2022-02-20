@@ -73,7 +73,7 @@ def get_subreddit_genre_mapping(
 
 
 def get_subreddit_subscriber_count(
-    reddit_instance: object,
+    reddit_instance,
     subreddits_and_genres: dict,
     subscriber_min_count: int,
     test_mode: bool,

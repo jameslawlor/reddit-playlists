@@ -4,7 +4,7 @@ genre_section_end_regex: "#Multi-genre & community subreddits.*"
 genre_regex: "##.*"
 subreddit_regex: ".*/r/.*"
 subscriber_min_count: 10000
-save_data: false
-filename_format: "subreddits-status-{date:%Y-%m-%d_%H:%M:%S}.csv"
-data_folder: "data"
+save_data: true
+filename_format: "{date:%Y%m%d_%H%M%S}.csv"
+data_folder: "data/subreddit_genre_sub_count"
 test_mode: true

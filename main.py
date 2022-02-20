@@ -1,5 +1,5 @@
 from functions.config_parsing import get_config
-from functions.tasks import get_subreddits_and_genres
+from functions.tasks import get_subreddits_and_genres, create_playlists
 import logging
 
 logging.getLogger().setLevel(logging.INFO)
@@ -21,6 +21,15 @@ if __name__ == "__main__":
             filename_format=config["filename_format"],
             data_folder=config["data_folder"],
             test_mode=config["test_mode"],
+        )
+    elif task == "create_playlists":
+        create_playlists(
+            genres_whitelist=config["genres_whitelist"],
+            subreddit_blacklist=config["subreddit_blacklist"],
+            playlist_base_str=config["playlist_base_str"],
+            input_dir=config["input_dir"],
+            input_file=config["input_file"],
+            output_dir=config["output_dir"],
         )
     else:
         raise ValueError("Task not recognised!")

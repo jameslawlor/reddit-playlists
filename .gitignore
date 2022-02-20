@@ -1,4 +1,5 @@
 praw.ini
+spotipy.cfg
 data/
 .pre-commit-config.yaml
 .flake8
