@@ -2,7 +2,11 @@ from functions.reddit import (
     get_subreddit_genre_mapping,
     get_subreddit_subscriber_count,
 )
-from functions.spotipy import get_spotipy_client
+from functions.spotipy import (
+    get_spotipy_client,
+    clean_subreddits,
+    get_existing_playlists,
+)
 from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
 from praw import Reddit
 import datetime
@@ -47,7 +51,19 @@ def create_playlists(
     output_dir,
 ):
     reddit_instance = Reddit("bot1")
-    spotipy = get_spotipy_client()
+    spotipy, spotify_username = get_spotipy_client()
     subreddit_genre_sub_counts = load_subreddit_genre_sub_counts(
         input_dir=input_dir, input_file=input_file
     )
+
+    cleaned_subreddit_dic = clean_subreddits(
+        subreddit_genre_sub_counts,
+        genres_whitelist,
+        subreddit_blacklist,
+    )
+
+    existing_playlists = get_existing_playlists(
+        spotify_username, spotipy, playlist_base_str
+    )
+    # print(existing_playlists)
+    print(cleaned_subreddit_dic)

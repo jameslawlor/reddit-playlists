@@ -91,8 +91,14 @@ def get_subreddit_subscriber_count(
         list_of_subreddits_and_genres = list(subreddits_and_genres.items())
 
     for (subreddit, values) in list_of_subreddits_and_genres:
-        subscriber_count = reddit_instance.subreddit(subreddit).subscribers
+        try:
+            subscriber_count = reddit_instance.subreddit(subreddit).subscribers
+        except:
+            # Catch 404s when subreddit banned or doesnt exist
+            subscriber_count = -1
+
         genre = values["genre"]
+        logging.info(f"Processing /r/{subreddit}")
         if subscriber_count >= subscriber_min_count:
             subreddits_and_genres_to_output[subreddit] = {
                 "genre": genre,
