@@ -109,12 +109,3 @@ def get_subreddit_subscriber_count(
     logging.info("Subreddit subscriber counts completed")
 
     return subreddits_and_genres_to_output
-
-
-def write_dict_to_csv(dict, write_path):
-    logging.info(f"Writing to {write_path}")
-    logging.info(dict)
-    df = pd.DataFrame.from_dict(dict).T
-    df.index.name = "subreddit"
-    logging.info(f"output df head\n {df.head()}")
-    df.to_csv(write_path)

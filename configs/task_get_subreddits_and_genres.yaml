@@ -5,6 +5,6 @@ genre_regex: "##.*"
 subreddit_regex: ".*/r/.*"
 subscriber_min_count: 10000
 save_data: true
-filename_format: "{date:%Y%m%d_%H%M%S}.csv"
+filename_format: "{date:%Y%m%d_%H%M%S}.json"
 data_folder: "data/subreddit_genre_sub_count"
 test_mode: true
