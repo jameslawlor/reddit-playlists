@@ -1,6 +1,5 @@
 import re
 import logging
-import pandas as pd
 
 logging.getLogger().setLevel(logging.INFO)
 
@@ -75,18 +74,15 @@ def get_subreddit_genre_mapping(
 def get_subreddit_subscriber_count(
     reddit_instance,
     subreddits_and_genres: dict,
-    subscriber_min_count: int,
     test_mode: bool,
 ) -> dict:
 
-    logging.info(
-        f"Getting subreddit subscriber counts and dropping subreddits under threshold {subscriber_min_count}"
-    )
+    logging.info(f"Getting subreddit subscriber counts")
 
     subreddits_and_genres_to_output = {}
 
     if test_mode:
-        list_of_subreddits_and_genres = list(subreddits_and_genres.items())[:5]
+        list_of_subreddits_and_genres = list(subreddits_and_genres.items())[:10]
     else:
         list_of_subreddits_and_genres = list(subreddits_and_genres.items())
 
@@ -98,19 +94,12 @@ def get_subreddit_subscriber_count(
             subscriber_count = -1
 
         genre = values["genre"]
-        logging.info(f"Processing /r/{subreddit}")
-        if subscriber_count >= subscriber_min_count:
-            subreddits_and_genres_to_output[subreddit] = {
-                "genre": genre,
-                "subscribers": subscriber_count,
-            }
-            logging.info(
-                f"/r/{subreddit} processed with {subscriber_count} subscribers"
-            )
-        else:
-            logging.info(
-                f"/r/{subreddit} dropped due to too few subscribers, {subscriber_count} found but needed > {subscriber_min_count}"
-            )
+
+        subreddits_and_genres_to_output[subreddit] = {
+            "genre": genre,
+            "subscribers": subscriber_count,
+        }
+        logging.info(f"/r/{subreddit} processed with {subscriber_count} subscribers")
 
     logging.info("Subreddit subscriber counts completed")
 

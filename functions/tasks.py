@@ -18,7 +18,6 @@ def get_subreddits_and_genres(
     genre_section_end_regex,
     genre_regex,
     subreddit_regex,
-    subscriber_min_count,
     filename_format,
     data_folder,
     test_mode,
@@ -33,7 +32,7 @@ def get_subreddits_and_genres(
         subreddit_regex,
     )
     subreddits_and_genres_trimmed = get_subreddit_subscriber_count(
-        reddit_instance, subreddits_and_genres, subscriber_min_count, test_mode
+        reddit_instance, subreddits_and_genres, test_mode
     )
 
     if save_data:
@@ -49,6 +48,7 @@ def create_playlists(
     input_dir,
     input_file,
     output_dir,
+    subscriber_min_count,
 ):
     reddit_instance = Reddit("bot1")
     spotipy, spotify_username = get_spotipy_client()
@@ -60,10 +60,39 @@ def create_playlists(
         subreddit_genre_sub_counts,
         genres_whitelist,
         subreddit_blacklist,
+        subscriber_min_count,
     )
 
     existing_playlists = get_existing_playlists(
         spotify_username, spotipy, playlist_base_str
     )
+
+    # subreddits_without_existing_playlists = get_subreddits_without_existing_playlists(
+    #     cleaned_subreddit_dic, existing_playlists, playlist_base_str
+    # )
+    # print(cleaned_subreddit_dic)
     # print(existing_playlists)
-    print(cleaned_subreddit_dic)
+    #
+    # for subreddit in subreddits_without_existing_playlists:
+    #     playlist_name = playlist_base_str.format(subreddit)
+    #     spotipy.user_playlist_create(spotify_username, playlist_name, public=True,)
+
+    # for (sub, info) in cleaned_subreddit_dic.items():
+    #     if
+    # playlist_base_str
+    #
+    # for sub in subs:
+    # 	playlist_name = '/r/{} top weekly tracks'.format(sub)
+    # 	spotify.user_playlist_create(spotify_username, playlist_name, public=True,)
+    # 	# Get playlist ID
+    # 	playlist_ids = []
+    # 	for pl in [_ for _ in spotify.user_playlists(spotify_username)['items']]:
+    # 		if pl['name'] == playlist_name:
+    # 			playlist_ids.append(pl['id'])
+    # 	assert len(playlist_ids) == 1
+    # 	playlist_id = playlist_ids[0]
+    # 	print("sub:", sub)
+    # 	print("PLAYLIST ID:", playlist_id)
+    # 	time.sleep(1) # Avoid hitting API call limit
+    # 	with open('subs_completed.txt', 'a') as fp:
+    # 		fp.write("{}\t{}\n".format(sub, playlist_id))

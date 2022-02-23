@@ -37,6 +37,7 @@ def clean_subreddits(
     subreddit_genre_sub_counts,
     genres_whitelist,
     subreddit_blacklist,
+    subscriber_min_count: int,
 ):
 
     logger.info("Cleaning list of subreddits...")
@@ -46,9 +47,14 @@ def clean_subreddits(
 
     for sub, info in list(subreddit_genre_sub_counts.items()):
         genre = info["genre"]
-        if (genre not in genres_whitelist) or (sub in subreddit_blacklist):
+        subscriber_count = info["subscribers"]
+        if (
+            (genre not in genres_whitelist)
+            or (sub in subreddit_blacklist)
+            or (subscriber_count < subscriber_min_count)
+        ):
             del subreddit_genre_sub_counts[sub]
-            print("Remove ", sub)
+            print("Removing ", sub)
 
     final_count = len(subreddit_genre_sub_counts)
     logger.info(f"Final count: {final_count}")
@@ -85,21 +91,3 @@ def create_playlist(
         playlist_name,
         public=True,
     )
-
-
-#
-# for sub in subs:
-# 	playlist_name = '/r/{} top weekly tracks'.format(sub)
-# 	spotify.user_playlist_create(spotify_username, playlist_name, public=True,)
-# 	# Get playlist ID
-# 	playlist_ids = []
-# 	for pl in [_ for _ in spotify.user_playlists(spotify_username)['items']]:
-# 		if pl['name'] == playlist_name:
-# 			playlist_ids.append(pl['id'])
-# 	assert len(playlist_ids) == 1
-# 	playlist_id = playlist_ids[0]
-# 	print("sub:", sub)
-# 	print("PLAYLIST ID:", playlist_id)
-# 	time.sleep(1) # Avoid hitting API call limit
-# 	with open('subs_completed.txt', 'a') as fp:
-# 		fp.write("{}\t{}\n".format(sub, playlist_id))

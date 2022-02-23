@@ -16,7 +16,6 @@ if __name__ == "__main__":
             genre_section_end_regex=config["genre_section_end_regex"],
             genre_regex=config["genre_regex"],
             subreddit_regex=config["subreddit_regex"],
-            subscriber_min_count=config["subscriber_min_count"],
             save_data=config["save_data"],
             filename_format=config["filename_format"],
             data_folder=config["data_folder"],
@@ -30,6 +29,7 @@ if __name__ == "__main__":
             input_dir=config["input_dir"],
             input_file=config["input_file"],
             output_dir=config["output_dir"],
+            subscriber_min_count=config["subscriber_min_count"],
         )
     else:
         raise ValueError("Task not recognised!")
