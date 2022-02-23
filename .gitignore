@@ -1,7 +1,11 @@
 praw.ini
+spotipy.cfg
 data/
 .pre-commit-config.yaml
 .flake8
+.DS_Store
+.cache-jalawlor
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
