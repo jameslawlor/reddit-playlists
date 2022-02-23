@@ -1,0 +1,2 @@
+task: 'delete_playlists'
+playlist_base_str: '/r/{} top weekly tracks'

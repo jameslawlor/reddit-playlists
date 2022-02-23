@@ -1,5 +1,9 @@
 from functions.config_parsing import get_config
-from functions.tasks import get_subreddits_and_genres, create_playlists
+from functions.tasks import (
+    get_subreddits_and_genres,
+    create_playlists,
+    delete_playlists,
+)
 import logging
 
 logging.getLogger().setLevel(logging.INFO)
@@ -30,6 +34,10 @@ if __name__ == "__main__":
             input_file=config["input_file"],
             output_dir=config["output_dir"],
             subscriber_min_count=config["subscriber_min_count"],
+        )
+    elif task == "delete_playlists":
+        delete_playlists(
+            playlist_base_str=config["playlist_base_str"],
         )
     else:
         raise ValueError("Task not recognised!")
