@@ -159,7 +159,6 @@ def update_playlists(
     spotipy, spotify_username = get_spotipy_client()
     reddit = Reddit("bot1")
     subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
-    print(subreddit_data)
 
     for subreddit, info in subreddit_data.items():
         playlist_id = info["id"]
