@@ -1,6 +1,9 @@
 from functions.reddit import (
     get_subreddit_genre_mapping,
     get_subreddit_subscriber_count,
+    get_subreddit_weekly_top_posts,
+    filter_submissions_matching_track_format,
+    get_artists_and_tracks_from_submissions,
 )
 from functions.spotipy import (
     get_spotipy_client,
@@ -10,6 +13,8 @@ from functions.spotipy import (
     get_subreddits_without_existing_playlists,
     unify_data,
     clear_playlist,
+    search_spotify_for_artists_and_tracks,
+    add_uris_to_playlist,
 )
 from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
 from functions.base_logger import logger
@@ -143,7 +148,13 @@ def create_empty_playlists(
     write_dict_json(unified_data_dic, write_path)
 
 
-def update_playlists(max_playlist_length, input_dir):
+def update_playlists(
+    max_playlist_length,
+    input_dir,
+    n_top_posts_to_check,
+    post_regex_pattern,
+    allowed_domains,
+):
 
     spotipy, spotify_username = get_spotipy_client()
     reddit = Reddit("bot1")
@@ -151,17 +162,28 @@ def update_playlists(max_playlist_length, input_dir):
     print(subreddit_data)
 
     for subreddit, info in subreddit_data.items():
-        logger.info(f"Processing {subreddit}")
-        clear_playlist(spotipy, spotify_username, info["id"])
+        playlist_id = info["id"]
+        clear_playlist(spotipy, spotify_username, playlist_id)
         # # Get top weekly from Reddit
-        # uris_to_add = get_weekly_top(sub)
-        # print(uris_to_add)
-        # if len(uris_to_add) > 0:
-        #     spotify.user_playlist_add_tracks(spotify_username,
-        #                                      playlist_id=playlist_id,
-        #                                      tracks=uris_to_add)
-        #     good_subs.append("{} : {}".format(sub, len(uris_to_add)))
-        # else:  # Flag this at end of run
-        #     bad_subs.append(sub)
+        subreddit_weekly_top_posts = get_subreddit_weekly_top_posts(
+            reddit, subreddit, n_top_posts_to_check
+        )
+        submissions_matching_track_format = filter_submissions_matching_track_format(
+            subreddit_weekly_top_posts, post_regex_pattern, allowed_domains
+        )
+        artists_and_tracks = get_artists_and_tracks_from_submissions(
+            submissions_matching_track_format, max_playlist_length, post_regex_pattern
+        )
+        spotify_uris_to_add = search_spotify_for_artists_and_tracks(
+            spotipy, artists_and_tracks, max_playlist_length
+        )
+        add_uris_to_playlist(
+            spotipy, spotify_username, playlist_id, spotify_uris_to_add
+        )
 
+        submissions_matching_track_format_count = len(submissions_matching_track_format)
+        spotify_uris_to_add_count = len(spotify_uris_to_add)
+        logger.info(
+            f"Processing {subreddit}: Found {submissions_matching_track_format_count} reddit submissions matching track format in top weekly {n_top_posts_to_check}, added {spotify_uris_to_add_count} to Spotify Playlist ID {playlist_id}"
+        )
         time.sleep(3)  # Avoid hitting API call limit

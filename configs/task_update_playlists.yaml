@@ -1,3 +1,6 @@
 task: "update_playlists"
 max_playlist_length: 15
 input_dir: "data/subreddit_playlist_mapping"
+n_top_posts_to_check: 20
+post_regex_pattern: '[-—]+'
+allowed_domains: ['spotify', 'youtu', 'soundcloud']

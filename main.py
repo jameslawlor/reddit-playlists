@@ -45,6 +45,9 @@ if __name__ == "__main__":
         update_playlists(
             max_playlist_length=config["max_playlist_length"],
             input_dir=config["input_dir"],
+            n_top_posts_to_check=config["n_top_posts_to_check"],
+            post_regex_pattern=config["post_regex_pattern"],
+            allowed_domains=config["allowed_domains"],
         )
     else:
         raise ValueError("Task not recognised!")

@@ -171,3 +171,33 @@ def clear_playlist(spotipy, spotify_username, playlist_id):
         spotify_username, playlist_id, track_uris_to_remove
     )
     return
+
+
+def spotify_search(spotify, artist, track):
+    query = "artist:" + artist + " track:" + track
+    return spotify.search(query, type="track")["tracks"]
+
+
+def search_spotify_for_artists_and_tracks(
+    spotipy, submissions_matching_track_format, max_playlist_length
+):
+
+    uris_list = []
+    for (artist, track) in submissions_matching_track_format:
+        search_results = spotify_search(spotipy, artist, track)
+        n_matches = search_results["total"]
+        if n_matches > 0:
+            selected_uri = search_results["items"][0]["uri"]  # take first search result
+            uris_list.append(selected_uri)
+    return uris_list
+
+
+def add_uris_to_playlist(spotify, spotify_username, playlist_id, spotify_uris_to_add):
+    if len(spotify_uris_to_add) > 0:
+        spotify.user_playlist_add_tracks(
+            spotify_username, playlist_id=playlist_id, tracks=spotify_uris_to_add
+        )
+    else:
+        logger.warning(
+            "WARNING: No valid Spotify URIs found for this subreddit's posts"
+        )
