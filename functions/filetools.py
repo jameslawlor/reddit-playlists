@@ -37,3 +37,9 @@ def load_subreddit_genre_sub_counts(
         subreddit_dic = json.load(f)
 
     return subreddit_dic
+
+
+def export_list_to_md(list_to_export, write_path):
+    with open(write_path, "w") as f:
+        for item in list_to_export:
+            f.write("%s\n" % item)

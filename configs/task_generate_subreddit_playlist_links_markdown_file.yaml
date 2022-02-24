@@ -1,0 +1,5 @@
+task: 'generate_subreddit_playlist_links_markdown_file'
+input_dir: 'data/subreddit_playlist_mapping'
+input_file: '' # if empty, pick most recent file
+output_dir: 'docs'
+output_filename: 'subreddit_playlist_links.md'

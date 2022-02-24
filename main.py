@@ -4,6 +4,7 @@ from functions.tasks import (
     create_empty_playlists,
     delete_playlists,
     update_playlists,
+    generate_subreddit_playlist_links_markdown_file,
 )
 import logging
 
@@ -48,6 +49,13 @@ if __name__ == "__main__":
             n_top_posts_to_check=config["n_top_posts_to_check"],
             post_regex_pattern=config["post_regex_pattern"],
             allowed_domains=config["allowed_domains"],
+        )
+    elif task == "generate_subreddit_playlist_links_markdown_file":
+        generate_subreddit_playlist_links_markdown_file(
+            input_dir=config["input_dir"],
+            input_file=config["input_file"],
+            output_dir=config["output_dir"],
+            output_filename=config["output_filename"],
         )
     else:
         raise ValueError("Task not recognised!")

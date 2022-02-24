@@ -16,13 +16,18 @@ from functions.spotipy import (
     search_spotify_for_artists_and_tracks,
     add_uris_to_playlist,
 )
-from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
+from functions.filetools import (
+    load_subreddit_genre_sub_counts,
+    write_dict_json,
+    export_list_to_md,
+)
 from functions.base_logger import logger
 
 from praw import Reddit
 import datetime
 import os
 import time
+import pandas as pd
 
 
 def get_subreddits_and_genres(
@@ -191,3 +196,29 @@ def update_playlists(
             f"Processing {subreddit}: Found {submissions_matching_track_format_count} reddit submissions matching track format in top weekly {n_top_posts_to_check}, added {spotify_uris_to_add_count} to Spotify Playlist ID {playlist_id}"
         )
         time.sleep(3)  # Avoid hitting API call limit
+
+
+def generate_subreddit_playlist_links_markdown_file(
+    input_dir,
+    input_file,
+    output_dir,
+    output_filename,
+):
+    out_txt = []
+    subreddit_data = load_subreddit_genre_sub_counts(input_dir, input_file)
+    df = pd.DataFrame.from_dict(subreddit_data, orient="index")
+    genres = list(df["genre"].unique())
+    for genre in genres:
+        out_txt.append(f"##{genre}")
+        subreddits_in_genre = [
+            subreddit
+            for subreddit in subreddit_data.keys()
+            if subreddit_data[subreddit]["genre"] == genre
+        ]
+        for subreddit in subreddits_in_genre:
+            playlist_id = subreddit_data[subreddit]["id"]
+            playlist_url = f"https://open.spotify.com/playlist/{playlist_id}"
+            out_txt.append(f"* [/r/{subreddit}]({playlist_url}) \n")
+
+    write_path = os.path.join(output_dir, output_filename)
+    export_list_to_md(out_txt, write_path)
