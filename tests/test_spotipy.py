@@ -1,4 +1,9 @@
-from functions.spotipy import get_subreddit_from_playlist_name, unify_data
+from functions.spotipy import (
+    get_subreddit_from_playlist_name,
+    unify_data,
+    get_subreddits_with_existing_playlists,
+    get_subreddits_without_existing_playlists,
+)
 
 
 def test_get_subreddit_from_playlist_name():
@@ -25,9 +30,18 @@ def test_unify_data():
         "hiphopheads": {"genre": "Hip-hop", "subscribers": 2029284},
         "kpop": {"genre": "By country/region/culture", "subscribers": 1232967},
     }
+
     existing_playlists = [
-        {"name": "/r/kpop top weekly tracks", "id": "6BWdRZ254hVUI0wDxjXpvb"},
-        {"name": "/r/hiphopheads top weekly tracks", "id": "7erepqmQxL7HhZPn48YjTt"},
+        {
+            "playlist_name": "/r/kpop top weekly tracks",
+            "id": "6BWdRZ254hVUI0wDxjXpvb",
+            "subreddit": "kpop",
+        },
+        {
+            "playlist_name": "/r/hiphopheads top weekly tracks",
+            "id": "7erepqmQxL7HhZPn48YjTt",
+            "subreddit": "hiphopheads",
+        },
     ]
 
     expected_output = {
@@ -37,17 +51,34 @@ def test_unify_data():
         "hiphopheads": {
             "genre": "Hip-hop",
             "subscribers": 2029284,
-            "name": "/r/hiphopheads top weekly tracks",
+            "playlist_name": "/r/hiphopheads top weekly tracks",
             "id": "7erepqmQxL7HhZPn48YjTt",
+            "subreddit": "hiphopheads",
         },
         "kpop": {
             "genre": "By country/region/culture",
             "subscribers": 1232967,
-            "name": "/r/kpop top weekly tracks",
+            "playlist_name": "/r/kpop top weekly tracks",
             "id": "6BWdRZ254hVUI0wDxjXpvb",
+            "subreddit": "kpop",
         },
     }
 
     output = unify_data(cleaned_subreddit_dic, existing_playlists)
-
     assert output == expected_output
+
+
+def test_get_subreddits_with_existing_playlists():
+
+    input = {"A": {"id": "blah"}, "B": {"id": "blah"}, "C": {}}
+    expected_output = ["A", "B"]
+
+    assert expected_output == get_subreddits_with_existing_playlists(input)
+
+
+def test_get_subreddits_without_existing_playlists():
+
+    input = {"A": {"id": "blah"}, "B": {"id": "blah"}, "C": {}}
+    expected_output = ["C"]
+
+    assert expected_output == get_subreddits_without_existing_playlists(input)
