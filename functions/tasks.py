@@ -14,6 +14,7 @@ from functions.base_logger import logger
 from praw import Reddit
 import datetime
 import os
+import time
 
 
 def get_subreddits_and_genres(
@@ -66,13 +67,14 @@ def delete_playlists(
     logger.info("Playlists deleted")
 
 
-def create_playlists(
+def create_empty_playlists(
     genres_whitelist,
     subreddit_blacklist,
     playlist_base_str,
     input_dir,
     input_file,
     output_dir,
+    filename_format,
     subscriber_min_count,
 ):
 
@@ -95,28 +97,35 @@ def create_playlists(
     subreddits_with_existing_playlists = get_subreddits_with_existing_playlists(
         cleaned_subreddit_dic, existing_playlists, playlist_base_str
     )
-    print(subreddits_with_existing_playlists)
-    #
-    # for subreddit in subreddits_without_existing_playlists:
-    #     playlist_name = playlist_base_str.format(subreddit)
-    #     spotipy.user_playlist_create(spotify_username, playlist_name, public=True,)
+    logger.info("Found subreddits_with_existing_playlists:")
+    logger.info(subreddits_with_existing_playlists)
+    if subreddits_with_existing_playlists:
+        subreddits_to_create_playlists_for = [
+            subreddit
+            for subreddit in list(cleaned_subreddit_dic.keys())
+            if subreddit not in subreddits_with_existing_playlists
+        ]
+    else:
+        subreddits_to_create_playlists_for = list(cleaned_subreddit_dic.keys())
 
-    # for (sub, info) in cleaned_subreddit_dic.items():
-    #     if
-    # playlist_base_str
-    #
-    # for sub in subs:
-    # 	playlist_name = '/r/{} top weekly tracks'.format(sub)
-    # 	spotify.user_playlist_create(spotify_username, playlist_name, public=True,)
-    # 	# Get playlist ID
-    # 	playlist_ids = []
-    # 	for pl in [_ for _ in spotify.user_playlists(spotify_username)['items']]:
-    # 		if pl['name'] == playlist_name:
-    # 			playlist_ids.append(pl['id'])
-    # 	assert len(playlist_ids) == 1
-    # 	playlist_id = playlist_ids[0]
-    # 	print("sub:", sub)
-    # 	print("PLAYLIST ID:", playlist_id)
-    # 	time.sleep(1) # Avoid hitting API call limit
-    # 	with open('subs_completed.txt', 'a') as fp:
-    # 		fp.write("{}\t{}\n".format(sub, playlist_id))
+    logger.info(
+        "Will create {} playlists".format(len(subreddits_to_create_playlists_for))
+    )
+    for subreddit in subreddits_to_create_playlists_for:
+        playlist_name = playlist_base_str.format(subreddit)
+        spotipy.user_playlist_create(
+            spotify_username,
+            playlist_name,
+            public=True,
+        )
+        time.sleep(1)  # Avoid hitting API call limit
+        logger.info(f"Creating playlist for {subreddit}")
+
+    # Get all playlist info and IDs and write to file
+    existing_playlists = get_existing_playlists(
+        spotify_username, spotipy, playlist_base_str
+    )
+
+    filename = filename_format.format(date=datetime.datetime.now())
+    write_path = os.path.join(output_dir, filename)
+    write_dict_json(existing_playlists, write_path)
