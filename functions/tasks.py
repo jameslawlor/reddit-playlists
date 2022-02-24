@@ -7,6 +7,8 @@ from functions.spotipy import (
     clean_subreddits,
     get_existing_playlists,
     get_subreddits_with_existing_playlists,
+    get_subreddits_without_existing_playlists,
+    unify_data,
 )
 from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
 from functions.base_logger import logger
@@ -57,7 +59,7 @@ def delete_playlists(
         spotify_username, spotipy, playlist_base_str
     )
     existing_playlists_ids = [x["id"] for x in existing_playlists]
-    existing_playlists_names = [x["name"] for x in existing_playlists]
+    existing_playlists_names = [x["playlist_name"] for x in existing_playlists]
     for (playlist_id, playlist_name) in zip(
         existing_playlists_ids, existing_playlists_names
     ):
@@ -94,24 +96,28 @@ def create_empty_playlists(
         spotify_username, spotipy, playlist_base_str
     )
 
+    unified_data_dic = unify_data(cleaned_subreddit_dic, existing_playlists)
+
     subreddits_with_existing_playlists = get_subreddits_with_existing_playlists(
-        cleaned_subreddit_dic, existing_playlists, playlist_base_str
+        unified_data_dic
     )
-    logger.info("Found subreddits_with_existing_playlists:")
-    logger.info(subreddits_with_existing_playlists)
+    subreddits_without_existing_playlists = get_subreddits_without_existing_playlists(
+        unified_data_dic
+    )
+
     if subreddits_with_existing_playlists:
-        subreddits_to_create_playlists_for = [
-            subreddit
-            for subreddit in list(cleaned_subreddit_dic.keys())
-            if subreddit not in subreddits_with_existing_playlists
-        ]
-    else:
-        subreddits_to_create_playlists_for = list(cleaned_subreddit_dic.keys())
+        logger.info("Found subreddits_with_existing_playlists:")
+        logger.info(subreddits_with_existing_playlists)
+
+    if subreddits_without_existing_playlists:
+        logger.info("Found subreddits_without_existing_playlists:")
+        logger.info(subreddits_without_existing_playlists)
 
     logger.info(
-        "Will create {} playlists".format(len(subreddits_to_create_playlists_for))
+        "Will create {} playlists".format(len(subreddits_without_existing_playlists))
     )
-    for subreddit in subreddits_to_create_playlists_for:
+
+    for subreddit in subreddits_without_existing_playlists:
         playlist_name = playlist_base_str.format(subreddit)
         spotipy.user_playlist_create(
             spotify_username,
@@ -125,7 +131,12 @@ def create_empty_playlists(
     existing_playlists = get_existing_playlists(
         spotify_username, spotipy, playlist_base_str
     )
+    # update unified_data_dic with new IDs
+    for playlist in existing_playlists:
+        subreddit = playlist["subreddit"]
+        unified_data_dic[subreddit]["id"] = playlist["id"]
+        unified_data_dic[subreddit]["playlist_name"] = playlist["playlist_name"]
 
     filename = filename_format.format(date=datetime.datetime.now())
     write_path = os.path.join(output_dir, filename)
-    write_dict_json(existing_playlists, write_path)
+    write_dict_json(unified_data_dic, write_path)
