@@ -171,13 +171,18 @@ def update_playlists(
             subreddit_weekly_top_posts, post_regex_pattern, allowed_domains
         )
         artists_and_tracks = get_artists_and_tracks_from_submissions(
-            submissions_matching_track_format, max_playlist_length, post_regex_pattern
+            submissions_matching_track_format, post_regex_pattern
         )
         spotify_uris_to_add = search_spotify_for_artists_and_tracks(
-            spotipy, artists_and_tracks, max_playlist_length
+            spotipy,
+            artists_and_tracks,
+            max_playlist_length,
         )
         add_uris_to_playlist(
-            spotipy, spotify_username, playlist_id, spotify_uris_to_add
+            spotipy,
+            spotify_username,
+            playlist_id,
+            spotify_uris_to_add,
         )
 
         submissions_matching_track_format_count = len(submissions_matching_track_format)
