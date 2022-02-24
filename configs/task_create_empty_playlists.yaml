@@ -1,7 +1,9 @@
-task: "create_playlists"
+task: "create_empty_playlists"
 genres_whitelist: ['Some decades', 'Electronic music', 'Classical music', 'By country/region/culture', 'Other', 'Hip-hop', 'Rock/Metal', 'Any genre',]
 subreddit_blacklist: ['composer', 'classicalmusic', 'Chiptunes', 'mashups', 'hiphop101', 'LofiHipHop', 'festivals', 'LetsTalkMusic', 'NameThatSong', 'IsolatedVocals', 'vocaloid',]
 input_dir: "data/subreddit_genre_sub_count"
 input_file: "" # if empty, pick most recent file
 output_dir: "data/subreddit_playlist_mapping"
-subscriber_min_count: 10000
+subscriber_min_count: 1000000
+playlist_base_str: '/r/{} top weekly tracks'
+filename_format: "{date:%Y%m%d_%H%M%S}.json"

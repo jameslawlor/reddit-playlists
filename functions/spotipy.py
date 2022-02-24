@@ -116,9 +116,9 @@ def create_playlist(
     )
 
 
-def get_subreddit_from_playlist_name(playlist, playlist_base_str):
+def get_subreddit_from_playlist_name(playlist_name, playlist_base_str):
     regex_pattern = playlist_base_str.replace("{}", "(.*)")
-    match = re.search(regex_pattern, playlist, re.IGNORECASE)
+    match = re.search(regex_pattern, playlist_name, re.IGNORECASE)
     return match.group(1)
 
 
@@ -126,15 +126,19 @@ def get_subreddits_with_existing_playlists(
     cleaned_subreddit_dic, existing_playlists, playlist_base_str
 ):
 
-    for playlist in existing_playlists:
+    subreddits_with_existing_playlists = []
+
+    for playlist_name_and_id in existing_playlists:
+
+        playlist_name = playlist_name_and_id["name"]
+        playlist_id = playlist_name_and_id["id"]
+
         playlist_subreddit_name = get_subreddit_from_playlist_name(
-            playlist, playlist_base_str
+            playlist_name, playlist_base_str
         )
         if playlist_subreddit_name in cleaned_subreddit_dic.keys():
-            cleaned_subreddit_dic[playlist_subreddit_name] = 1
-        else:
-            logger.warning(f"{playlist_subreddit_name} NOT FOUND")
-
-    logger.info(sorted(cleaned_subreddit_dic.keys()))
-
-    return 1
+            subreddits_with_existing_playlists.append(playlist_subreddit_name)
+    #     else:
+    #         logger.warning(f"{playlist_subreddit_name} NOT FOUND")
+    #
+    return subreddits_with_existing_playlists
