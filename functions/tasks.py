@@ -7,6 +7,7 @@ from functions.spotipy import (
     clean_subreddits,
     get_existing_playlists,
     get_subreddits_with_existing_playlists,
+    unify_data,
 )
 from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
 from functions.base_logger import logger
@@ -94,6 +95,9 @@ def create_empty_playlists(
         spotify_username, spotipy, playlist_base_str
     )
 
+    unified_data_dic = unify_data(cleaned_subreddit_dic, existing_playlists)
+    print(unified_data_dic)
+    stop
     subreddits_with_existing_playlists = get_subreddits_with_existing_playlists(
         cleaned_subreddit_dic, existing_playlists, playlist_base_str
     )

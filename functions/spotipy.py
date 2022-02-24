@@ -84,21 +84,28 @@ def get_existing_playlists(
     )
 
     all_playlists_names_and_ids = [
-        {"name": playlist["name"], "id": playlist["id"]}
+        {"playlist_name": playlist["name"], "id": playlist["id"]}
         for playlist in all_playlists_collection
     ]
 
-    # Delete only playlists matching the playlist_base_str format
+    # Filter playlists that match the playlist_base_str pattern
     playlist_type_regex = re.compile(playlist_base_str.replace("{}", ".*"))
     matching_playlists = [
-        {"name": x["name"], "id": x["id"]}
+        {
+            "playlist_name": x["playlist_name"],
+            "id": x["id"],
+            "subreddit": get_subreddit_from_playlist_name(
+                x["playlist_name"], playlist_base_str
+            ),
+        }
         for x in all_playlists_names_and_ids
-        if playlist_type_regex.match(x["name"])
+        if playlist_type_regex.match(x["playlist_name"])
     ]
     matching_playlists_count = len(matching_playlists)
     logger.info(
         f"Found {matching_playlists_count} playlists that match pattern {playlist_type_regex}"
     )
+
     return matching_playlists
 
 
@@ -130,15 +137,21 @@ def get_subreddits_with_existing_playlists(
 
     for playlist_name_and_id in existing_playlists:
 
-        playlist_name = playlist_name_and_id["name"]
-        playlist_id = playlist_name_and_id["id"]
+        playlist_name = playlist_name_and_id["playlist_name"]
 
-        playlist_subreddit_name = get_subreddit_from_playlist_name(
+        subreddit_name_from_playlist = get_subreddit_from_playlist_name(
             playlist_name, playlist_base_str
         )
-        if playlist_subreddit_name in cleaned_subreddit_dic.keys():
-            subreddits_with_existing_playlists.append(playlist_subreddit_name)
-    #     else:
-    #         logger.warning(f"{playlist_subreddit_name} NOT FOUND")
-    #
+        if subreddit_name_from_playlist in cleaned_subreddit_dic.keys():
+            subreddits_with_existing_playlists.append(subreddit_name_from_playlist)
+
     return subreddits_with_existing_playlists
+
+
+def unify_data(cleaned_subreddit_dic, existing_playlists):
+
+    for subreddit, info in cleaned_subreddit_dic.items():
+        # playlist_info =
+        info += existing_playlists
+    print(cleaned_subreddit_dic)
+    print(existing_playlists)
