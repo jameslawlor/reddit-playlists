@@ -1,7 +1,5 @@
 import re
-import logging
-
-logging.getLogger().setLevel(logging.INFO)
+from functions.base_logger import logger
 
 
 def get_wikipage(reddit_instance) -> list:
@@ -35,7 +33,7 @@ def trim_wikipage(
 def parse_wikipage(trimmed_wikipage, genre_regex, subreddit_regex):
     subreddit_genre_mappings = {}
 
-    logging.info("Getting genres and subreddits from /r/Music wiki")
+    logger.info("Getting genres and subreddits from /r/Music wiki")
 
     for line in trimmed_wikipage:
         if re.search(genre_regex, line):
@@ -46,7 +44,7 @@ def parse_wikipage(trimmed_wikipage, genre_regex, subreddit_regex):
         else:
             pass
 
-    logging.info("Finished getting genres and subreddits")
+    logger.info("Finished getting genres and subreddits")
     return subreddit_genre_mappings
 
 
@@ -77,7 +75,7 @@ def get_subreddit_subscriber_count(
     test_mode: bool,
 ) -> dict:
 
-    logging.info(f"Getting subreddit subscriber counts")
+    logger.info(f"Getting subreddit subscriber counts")
 
     subreddits_and_genres_to_output = {}
 
@@ -99,8 +97,77 @@ def get_subreddit_subscriber_count(
             "genre": genre,
             "subscribers": subscriber_count,
         }
-        logging.info(f"/r/{subreddit} processed with {subscriber_count} subscribers")
+        logger.info(f"/r/{subreddit} processed with {subscriber_count} subscribers")
 
-    logging.info("Subreddit subscriber counts completed")
+    logger.info("Subreddit subscriber counts completed")
 
     return subreddits_and_genres_to_output
+
+
+def get_subreddit_weekly_top_posts(reddit, subreddit, n_top_posts_to_check):
+    s = reddit.subreddit(subreddit)
+    return list(s.top(time_filter="week", limit=n_top_posts_to_check))
+
+
+def get_artists_and_tracks_from_submissions(
+    submissions, max_playlist_length, regex_pattern
+):
+    artists_and_tracks = []
+
+    for submission in submissions:
+        submission_title = submission.title
+        artist, track = get_artist_and_track_from_submission(
+            submission_title, regex_pattern
+        )
+
+        if artist and track:
+            artists_and_tracks.append((artist, track))
+
+        if len(artists_and_tracks) > max_playlist_length:
+            break
+
+    return artists_and_tracks
+
+
+def get_artist_and_track_from_submission(submission_title, regex_pattern):
+    submission_stripped = re.sub(
+        r"[\(\[].*?[\)\]]", "", submission_title
+    )  # remove everything in brackets
+    info = re.split(regex_pattern, submission_stripped)
+    if len(info) == 2:
+        artist = info[0].strip()
+        track = info[1].strip()
+        return artist, track
+    else:
+        return None, None
+
+
+def filter_submissions_matching_track_format(
+    submissions, post_regex_pattern, allowed_domains
+):
+
+    filtered_submissions = []
+    for submission in list(submissions):
+        submission_url = submission.url
+        submission_title = submission.title
+        if does_submission_match_track_format(
+            submission_url, submission_title, post_regex_pattern, allowed_domains
+        ):
+
+            filtered_submissions.append(submission)
+    return filtered_submissions
+
+
+def does_submission_match_track_format(
+    submission_url, submission_title, regex_pattern, allowed_domains
+):
+    """Parse submission and decide whether we'll look it up on Spotify"""
+    domain_match = any(s in submission_url for s in allowed_domains)
+
+    # remove strings enclosed in brackets, sometimes extra info like Year of release, album, country, etc.
+    stripped_submission = re.sub(r"[\(\[].*?[\)\]]", "", submission_title)
+
+    if (domain_match) and (re.search(regex_pattern, stripped_submission)):
+        return True
+    else:
+        return False

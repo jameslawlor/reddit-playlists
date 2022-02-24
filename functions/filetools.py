@@ -36,5 +36,4 @@ def load_subreddit_genre_sub_counts(
     with open(full_path, "r") as f:
         subreddit_dic = json.load(f)
 
-    logging.info(subreddit_dic)
     return subreddit_dic

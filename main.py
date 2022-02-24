@@ -3,6 +3,7 @@ from functions.tasks import (
     get_subreddits_and_genres,
     create_empty_playlists,
     delete_playlists,
+    update_playlists,
 )
 import logging
 
@@ -39,6 +40,14 @@ if __name__ == "__main__":
     elif task == "delete_playlists":
         delete_playlists(
             playlist_base_str=config["playlist_base_str"],
+        )
+    elif task == "update_playlists":
+        update_playlists(
+            max_playlist_length=config["max_playlist_length"],
+            input_dir=config["input_dir"],
+            n_top_posts_to_check=config["n_top_posts_to_check"],
+            post_regex_pattern=config["post_regex_pattern"],
+            allowed_domains=config["allowed_domains"],
         )
     else:
         raise ValueError("Task not recognised!")
