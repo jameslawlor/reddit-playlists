@@ -159,3 +159,15 @@ def unify_data(cleaned_subreddit_dic, existing_playlists):
             cleaned_subreddit_dic[subreddit] = dict(info, **playlist_info[0])
 
     return cleaned_subreddit_dic
+
+
+def clear_playlist(spotipy, spotify_username, playlist_id):
+    """Clears spotify playlist at playlist_id"""
+    playlist_track_list = spotipy.user_playlist_tracks(spotify_username, playlist_id)
+    track_uris_to_remove = [
+        track["track"]["uri"] for track in playlist_track_list["items"]
+    ]
+    spotipy.user_playlist_remove_all_occurrences_of_tracks(
+        spotify_username, playlist_id, track_uris_to_remove
+    )
+    return

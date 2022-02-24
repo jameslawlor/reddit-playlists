@@ -9,6 +9,7 @@ from functions.spotipy import (
     get_subreddits_with_existing_playlists,
     get_subreddits_without_existing_playlists,
     unify_data,
+    clear_playlist,
 )
 from functions.filetools import load_subreddit_genre_sub_counts, write_dict_json
 from functions.base_logger import logger
@@ -140,3 +141,27 @@ def create_empty_playlists(
     filename = filename_format.format(date=datetime.datetime.now())
     write_path = os.path.join(output_dir, filename)
     write_dict_json(unified_data_dic, write_path)
+
+
+def update_playlists(max_playlist_length, input_dir):
+
+    spotipy, spotify_username = get_spotipy_client()
+    reddit = Reddit("bot1")
+    subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
+    print(subreddit_data)
+
+    for subreddit, info in subreddit_data.items():
+        logger.info(f"Processing {subreddit}")
+        clear_playlist(spotipy, spotify_username, info["id"])
+        # # Get top weekly from Reddit
+        # uris_to_add = get_weekly_top(sub)
+        # print(uris_to_add)
+        # if len(uris_to_add) > 0:
+        #     spotify.user_playlist_add_tracks(spotify_username,
+        #                                      playlist_id=playlist_id,
+        #                                      tracks=uris_to_add)
+        #     good_subs.append("{} : {}".format(sub, len(uris_to_add)))
+        # else:  # Flag this at end of run
+        #     bad_subs.append(sub)
+
+        time.sleep(3)  # Avoid hitting API call limit
