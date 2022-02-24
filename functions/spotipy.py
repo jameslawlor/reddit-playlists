@@ -188,7 +188,12 @@ def search_spotify_for_artists_and_tracks(
         n_matches = search_results["total"]
         if n_matches > 0:
             selected_uri = search_results["items"][0]["uri"]  # take first search result
-            uris_list.append(selected_uri)
+            if selected_uri not in uris_list:
+                uris_list.append(selected_uri)
+
+        if len(uris_list) >= max_playlist_length:
+            return uris_list
+
     return uris_list
 
 

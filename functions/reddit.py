@@ -109,9 +109,7 @@ def get_subreddit_weekly_top_posts(reddit, subreddit, n_top_posts_to_check):
     return list(s.top(time_filter="week", limit=n_top_posts_to_check))
 
 
-def get_artists_and_tracks_from_submissions(
-    submissions, max_playlist_length, regex_pattern
-):
+def get_artists_and_tracks_from_submissions(submissions, regex_pattern):
     artists_and_tracks = []
 
     for submission in submissions:
@@ -122,9 +120,6 @@ def get_artists_and_tracks_from_submissions(
 
         if artist and track:
             artists_and_tracks.append((artist, track))
-
-        if len(artists_and_tracks) > max_playlist_length:
-            break
 
     return artists_and_tracks
 
