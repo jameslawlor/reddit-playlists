@@ -209,7 +209,7 @@ def generate_subreddit_playlist_links_markdown_file(
     df = pd.DataFrame.from_dict(subreddit_data, orient="index")
     genres = list(df["genre"].unique())
     for genre in genres:
-        out_txt.append(f"##{genre}")
+        out_txt.append(f"## {genre}")
         subreddits_in_genre = [
             subreddit
             for subreddit in subreddit_data.keys()

@@ -19,7 +19,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 # Playlists by genre
 
-##Electronic music
+## Electronic music
 * [/r/ambientmusic](https://open.spotify.com/playlist/4XilaEY4NCiVviBZJNqZTM) 
 
 * [/r/breakcore](https://open.spotify.com/playlist/0dHmesP9twK4ag8p1ECFuP) 
@@ -34,7 +34,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/electrohouse](https://open.spotify.com/playlist/6PIZ0tgAWEcHr6BTzjM0LS) 
 
-* [/r/ElectronicMusic](https://open.spotify.com/playlist/0noikGt3SoWl7a8jpWkboG) 
+* [/r/ElectronicMusic](https://open.spotify.com/playlist/0noikGt3SoWl7a8jpWkboG)
 
 * [/r/ExperimentalMusic](https://open.spotify.com/playlist/4lACpGx0W7n7fmLRBE5Fgu) 
 
@@ -66,7 +66,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/psytrance](https://open.spotify.com/playlist/5cghsRDlu9sTeIr99F1QkG) 
 
-* [/r/RealDubstep](https://open.spotify.com/playlist/4KIZFWLSKogeOIi7ujnB4n)
+* [/r/RealDubstep](https://open.spotify.com/playlist/4KIZFWLSKogeOIi7ujnB4n)  
 
 * [/r/tech_house](https://open.spotify.com/playlist/33XGjEBT9Kl9N6tObJrlEN) 
 
@@ -76,14 +76,14 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/trap](https://open.spotify.com/playlist/1cFUHRyngvIQLjswMjEUYZ) 
 
-##Rock/Metal
+## Rock/Metal
 * [/r/90sAlternative](https://open.spotify.com/playlist/4I18OCxZEt26FhsaLoZRD7) 
 
 * [/r/AlternativeRock](https://open.spotify.com/playlist/0Ucjfv55d3IFVi1pvICxZj) 
 
 * [/r/AltCountry](https://open.spotify.com/playlist/4ZmgHu7SrmxMySj3zaHWqR) 
 
-* [/r/BlackMetal](https://open.spotify.com/playlist/5cOFR4BlFFkgfnnFJGpVVm)  
+* [/r/BlackMetal](https://open.spotify.com/playlist/5cOFR4BlFFkgfnnFJGpVVm)
 
 * [/r/Blues](https://open.spotify.com/playlist/0DUqsMAbwurMY2TMogLtgr) 
 
@@ -157,8 +157,8 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/OutlawCountry](https://open.spotify.com/playlist/61GlsZDaLMQskuAjj2THhv) 
 
-##Hip-hop
-* [/r/90sHipHop](https://open.spotify.com/playlist/2hCPThgSMusHX5kEyxtWvH)  
+## Hip-hop
+* [/r/90sHipHop](https://open.spotify.com/playlist/2hCPThgSMusHX5kEyxtWvH)
 
 * [/r/hiphopheads](https://open.spotify.com/playlist/1PtCtCffmfp84wG6sbEI0i) 
 
@@ -168,7 +168,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/ukhiphopheads](https://open.spotify.com/playlist/12sVvh8T8HaI4MPqDMlZo3) 
 
-##Some decades
+## Some decades
 * [/r/90sMusic](https://open.spotify.com/playlist/2vkvybsK5dfS6LgLQPOgM5) 
 
 * [/r/80sMusic](https://open.spotify.com/playlist/5qZP3JO93Eji8sCBywYUT5) 
@@ -177,7 +177,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/60sMusic](https://open.spotify.com/playlist/6cEbB4eDNOK5gM9kMwaKAs) 
 
-##By country/region/culture
+## By country/region/culture
 * [/r/Irishmusic](https://open.spotify.com/playlist/2CsijIFvi2uKvXUdCz0oBr) 
 
 * [/r/jpop](https://open.spotify.com/playlist/6EiTydI8j975A3OSitfeGv) 
@@ -188,7 +188,7 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/spop](https://open.spotify.com/playlist/23n2gUn58TeOkMXmwKvQzj)
 
-##Other
+## Other
 * [/r/animemusic](https://open.spotify.com/playlist/4DrZDba6KAJWppYTht9MRt) 
 
 * [/r/chillmusic](https://open.spotify.com/playlist/1hBmZYfubwFaK7SP3KMXxU) 
@@ -229,5 +229,4 @@ Taking the top track submissions in the last week from /r/Rock and adding them t
 
 * [/r/vaporwave](https://open.spotify.com/playlist/6gLUfgnqoWaHXks4LKvPLG) 
 
-* [/r/VintageObscura](https://open.spotify.com/playlist/6BNJisuhenItSBS6IF3p8r) 
-
+* [/r/VintageObscura](https://open.spotify.com/playlist/6BNJisuhenItSBS6IF3p8r)
