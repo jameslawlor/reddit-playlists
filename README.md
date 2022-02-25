@@ -11,6 +11,8 @@ There are hundreds of active music-related subreddits devoted to specific genres
 
 #### Example
 Taking the top track submissions in the last week from /r/Rock and adding them to a Spotify playlist. 
+
+
  ![img.png](docs/img.png)
 
 ## Setup
