@@ -46,9 +46,12 @@ Add these to the project root directory
 
 ## Current issues and future development
 
-There are a couple of issues where the wrong tracks can be added or valid tracks missed completely for various reasons.
- The current implementation is not perfect but still results in pretty good (IMO) playlists.
-Future development will probably focus on improving these problems.
+There are a couple of issues where the wrong tracks can be added or valid tracks missed completely for various reasons,
+mainly because of the difficulty in handling the variability in submission format and due to remixes or covers and so on.
+ Future development will probably focus on improving these problems.
+
+At some point I would like to add support for archiving past playlists, currently they are overwritten entirely. 
+I also think it could be useful to provide monthly top tracks for smaller subreddits that don't get many submissions.  
 
 This is an open project so if you spot a way to improve anything feel free to create a PR :)
 

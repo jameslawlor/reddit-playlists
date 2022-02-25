@@ -13,238 +13,215 @@ You can contact me via [LinkedIn](https://www.linkedin.com/in/james-lawlor/) or 
 
 # Playlists by genre
 
-### Classical music
-* [/r/ElitistClassical](https://open.spotify.com/playlist/12WUWXpIraVeZEh5qrih3w) 
+##Electronic music
+* [/r/ambientmusic](https://open.spotify.com/playlist/4XilaEY4NCiVviBZJNqZTM) 
 
-* [/r/Opera](https://open.spotify.com/playlist/6QxeasH43NjykEPT44gEv5) 
+* [/r/breakcore](https://open.spotify.com/playlist/0dHmesP9twK4ag8p1ECFuP) 
 
-### Electronic music
-* [/r/ambientmusic](https://open.spotify.com/playlist/69XNatgudLjLW6JU0OmnUk) 
+* [/r/deephouse](https://open.spotify.com/playlist/7MZTIorPaihIivuxXfJrHv) 
 
-* [/r/breakcore](https://open.spotify.com/playlist/7p9a3S43b3Qwt0nLvfWSw8) 
+* [/r/DnB](https://open.spotify.com/playlist/2sGz2CihapNVxthAqI7MWx) 
 
-* [/r/deephouse](https://open.spotify.com/playlist/1d7zfGJnINqyYsHuzmeQMw) 
+* [/r/DubStep](https://open.spotify.com/playlist/41GMenGiyrB6AmaTajOQZR) 
 
-* [/r/DnB](https://open.spotify.com/playlist/2uJmUWl626oM7SAhdaaapf) 
+* [/r/EDM](https://open.spotify.com/playlist/3lLY6xtHj6mWODe8WeMlfF) 
 
-* [/r/DubStep](https://open.spotify.com/playlist/6m5ruC2epuizZCgQO62VQm) 
+* [/r/electrohouse](https://open.spotify.com/playlist/6PIZ0tgAWEcHr6BTzjM0LS) 
 
-* [/r/EDM](https://open.spotify.com/playlist/57VTgkzDZR5uEjIcBIR6yr) 
+* [/r/ElectronicMusic](https://open.spotify.com/playlist/0noikGt3SoWl7a8jpWkboG) 
 
-* [/r/electrohouse](https://open.spotify.com/playlist/6o1Winj4aTTColtMHHiQ8B) 
+* [/r/ExperimentalMusic](https://open.spotify.com/playlist/4lACpGx0W7n7fmLRBE5Fgu) 
 
-* [/r/ElectronicMusic](https://open.spotify.com/playlist/0tCIR89HQn6L7cZYgQvy6g) 
+* [/r/futurebeats](https://open.spotify.com/playlist/1o0yVxGCezlM8oIkG3UWVj) 
 
-* [/r/electroswing](https://open.spotify.com/playlist/2BvABsBJ5JKfYGNU2QgZzc) 
+* [/r/FutureGarage](https://open.spotify.com/playlist/7p0VzGRWLcj0rpo7nc5fMq) 
 
-* [/r/ExperimentalMusic](https://open.spotify.com/playlist/6cpxa8MDW4GEuFK4A6toHl) 
+* [/r/futuresynth](https://open.spotify.com/playlist/0DjlubZwmeGEsdASTNh9jA) 
 
-* [/r/futurebeats](https://open.spotify.com/playlist/5a18ni33TMax8jEDJbNz3m) 
+* [/r/Grime](https://open.spotify.com/playlist/6ikiRnTr1WXFlxVKygwT3n) 
 
-* [/r/FutureGarage](https://open.spotify.com/playlist/1xW482zsBGrLzEb1KNImKv) 
+* [/r/hardstyle](https://open.spotify.com/playlist/6OOsbaZaeB36WMopyVjW2u) 
 
-* [/r/futuresynth](https://open.spotify.com/playlist/0ZgSUttgFH1RYqtuMzfHQl) 
+* [/r/house](https://open.spotify.com/playlist/6JHQGS8EPcHDXV3qAhjcU1) 
 
-* [/r/Grime](https://open.spotify.com/playlist/3jjZzC1iVQtDc1L4YUGRdN) 
+* [/r/idm](https://open.spotify.com/playlist/1AS7iwcod9UR4Pu6AZotug) 
 
-* [/r/hardstyle](https://open.spotify.com/playlist/024PqkvBUYjZTm6D0gBEi1) 
+* [/r/industrialmusic](https://open.spotify.com/playlist/6oss9V7Y8v44834vsYtsVv) 
 
-* [/r/house](https://open.spotify.com/playlist/2TxiymyyaGTIcH21xtLCXl) 
+* [/r/minimal](https://open.spotify.com/playlist/5WK2SUs27szwUJdcM0P2ee) 
 
-* [/r/idm](https://open.spotify.com/playlist/5TGakcsDKohS4EJjWgsj5e) 
+* [/r/mixes](https://open.spotify.com/playlist/0dkVD2mUQLvjb1FrX3tO7B) 
 
-* [/r/industrialmusic](https://open.spotify.com/playlist/4YNP4jDwi1NcYZ7OMM1Bel) 
+* [/r/Outrun](https://open.spotify.com/playlist/4Nh2oNWYZEk4SOoIRNNULW) 
 
-* [/r/minimal](https://open.spotify.com/playlist/0QevDtys8RXKubKfM5A5rJ) 
+* [/r/theOverload](https://open.spotify.com/playlist/4FqwLXivMXRXMSMubawF5C) 
 
-* [/r/mixes](https://open.spotify.com/playlist/2yGOxMAdCyqPj0fWN4236F) 
+* [/r/psybient](https://open.spotify.com/playlist/5iTvIiOJ4KB53WMfNgzTfO) 
 
-* [/r/Outrun](https://open.spotify.com/playlist/3aN68Qbu1KkyXqbIWp9gK2) 
+* [/r/psytrance](https://open.spotify.com/playlist/5cghsRDlu9sTeIr99F1QkG) 
 
-* [/r/theOverload](https://open.spotify.com/playlist/6z7gd3qNmT43kNWZQkTH58) 
+* [/r/RealDubstep](https://open.spotify.com/playlist/4KIZFWLSKogeOIi7ujnB4n)
 
-* [/r/psybient](https://open.spotify.com/playlist/3240zJpL08p4EtcwcGS98u) 
+* [/r/tech_house](https://open.spotify.com/playlist/33XGjEBT9Kl9N6tObJrlEN) 
 
-* [/r/psytrance](https://open.spotify.com/playlist/6vzzOeJhn9TEfmdDHh3pnl) 
+* [/r/Techno](https://open.spotify.com/playlist/2v1e1u5lpUjBnQ6voNqC2l) 
 
-* [/r/RealDubstep](https://open.spotify.com/playlist/4Km5zr1ex6bONjk1VgkC6E) 
+* [/r/Trance](https://open.spotify.com/playlist/7ev1uSxbLO5KmWEcYnVvAj) 
 
-* [/r/swinghouse](https://open.spotify.com/playlist/6W9KccIkRLibHSkciilgAG) 
+* [/r/trap](https://open.spotify.com/playlist/1cFUHRyngvIQLjswMjEUYZ) 
 
-* [/r/tech_house](https://open.spotify.com/playlist/2uJJjweC8y1HtHILjBuG1p) 
+##Rock/Metal
+* [/r/90sAlternative](https://open.spotify.com/playlist/4I18OCxZEt26FhsaLoZRD7) 
 
-* [/r/Techno](https://open.spotify.com/playlist/3tifK1vDeHPihkHpmejhqP) 
+* [/r/AlternativeRock](https://open.spotify.com/playlist/0Ucjfv55d3IFVi1pvICxZj) 
 
-* [/r/Trance](https://open.spotify.com/playlist/1t12oklJnAOPE5Ujwu7eiy) 
+* [/r/AltCountry](https://open.spotify.com/playlist/4ZmgHu7SrmxMySj3zaHWqR) 
 
-* [/r/trap](https://open.spotify.com/playlist/0LOjkjOy1bqTIhIVN5HoAI) 
+* [/r/BlackMetal](https://open.spotify.com/playlist/5cOFR4BlFFkgfnnFJGpVVm)  
 
-### Rock/Metal
-* [/r/90sAlternative](https://open.spotify.com/playlist/1GJqbOKFMoBF524KZQ0MUr) 
+* [/r/Blues](https://open.spotify.com/playlist/0DUqsMAbwurMY2TMogLtgr) 
 
-* [/r/AlternativeRock](https://open.spotify.com/playlist/5RQkfyjMFTO0OBGPnM50Dj) 
+* [/r/ClassicRock](https://open.spotify.com/playlist/1tOhNjYaGcmlFD1Vc9wCoa) 
 
-* [/r/AltCountry](https://open.spotify.com/playlist/2F1sryqXFRroiZH2itUvmR) 
+* [/r/country](https://open.spotify.com/playlist/5LOzGAm0eHj8dlR4DWEWtH) 
 
-* [/r/BlackMetal](https://open.spotify.com/playlist/3RIHhAi0AgNROE8aiNzHJP) 
+* [/r/deathcore](https://open.spotify.com/playlist/0ZJKqqz1QeaduyG8Bb4npc) 
 
-* [/r/bluegrass](https://open.spotify.com/playlist/4pB4ERVZXAPq72tHElxMBR) 
+* [/r/deathmetal](https://open.spotify.com/playlist/1fnFYmIzPReMPRylQMWgZw) 
 
-* [/r/Blues](https://open.spotify.com/playlist/5i52iCCXUh6uO0ZkpHdoSd) 
+* [/r/Djent](https://open.spotify.com/playlist/3qp6kIibhmKuRhp7DjoIyg) 
 
-* [/r/ClassicRock](https://open.spotify.com/playlist/2hN7lRvTcY9973cwQwj6TZ) 
+* [/r/DoomMetal](https://open.spotify.com/playlist/0sKGidPxbUSIVicptBewJq)
 
-* [/r/country](https://open.spotify.com/playlist/7aDTpqRMiO89J3yV2O2ZKO) 
+* [/r/Emo](https://open.spotify.com/playlist/4Wa7kYvM4nQGEt8SfxMFIh)  
 
-* [/r/deathcore](https://open.spotify.com/playlist/5JLozfwPAz27MO9giRktMn) 
+* [/r/folk](https://open.spotify.com/playlist/1nsLFAbJQ7IOjdNi0sF1s9) 
 
-* [/r/deathmetal](https://open.spotify.com/playlist/56cfmOjPFpvvWh8zIJmvLj) 
+* [/r/folkmetal](https://open.spotify.com/playlist/1dYDid9th1YdeLvE4Csvtz) 
 
-* [/r/Djent](https://open.spotify.com/playlist/1O8ZHK53RoKC63R3hJWZH9) 
+* [/r/folkpunk](https://open.spotify.com/playlist/6k9kSblwSxVChdV3llTIC2) 
 
-* [/r/DoomMetal](https://open.spotify.com/playlist/5mnF8FxgHU4bHZprLVLmom) 
+* [/r/Grunge](https://open.spotify.com/playlist/4LUsdyqctRJx7LaH5iuuaC) 
 
-* [/r/Drone](https://open.spotify.com/playlist/1swT2pWSFpr9iGxoDV6AVF) 
+* [/r/hardcore](https://open.spotify.com/playlist/4ZpdMcjogBNP8woPgUFG5s) 
 
-* [/r/Emo](https://open.spotify.com/playlist/55rnR5LO8j6DcH8qZdcrTp) 
+* [/r/HardRock](https://open.spotify.com/playlist/4EHrMgzAKX4Q2VWisN3QzU) 
 
-* [/r/EmoScreamo](https://open.spotify.com/playlist/0FYhvH1YnAr7XUdSUEdWhC) 
+* [/r/indie_rock](https://open.spotify.com/playlist/0YIlQHLjZZzBnzrhgWeeoD) 
 
-* [/r/folk](https://open.spotify.com/playlist/0vKAMKaljqKACBZgC8RmNX) 
+* [/r/MathRock](https://open.spotify.com/playlist/7kgPLza2IO98X7M49tMQIp) 
 
-* [/r/folkmetal](https://open.spotify.com/playlist/1M1EIyTozvqis5EsgyWwkf) 
+* [/r/melodicdeathmetal](https://open.spotify.com/playlist/4jRMnJjAH6AfQ1WkHzLYg6) 
 
-* [/r/folkpunk](https://open.spotify.com/playlist/72AwXgh8TYCQiRk7HBa3gK) 
+* [/r/metal](https://open.spotify.com/playlist/6vu6RZbGM2khVH3xpJMQIt) 
 
-* [/r/Grunge](https://open.spotify.com/playlist/25NxXlI9jSKVaY3dv6PpEC) 
+* [/r/metalcore](https://open.spotify.com/playlist/4EitJNhVEkpggr80CcXVcO) 
 
-* [/r/hardcore](https://open.spotify.com/playlist/2iBK8gSS9SSidOg0EpGkDZ) 
+* [/r/NewWave](https://open.spotify.com/playlist/56NRZTpasBtXxTuAnHCaTf) 
 
-* [/r/HardRock](https://open.spotify.com/playlist/5eltapKe59kgZMxB3BLB3c) 
+* [/r/noiserock](https://open.spotify.com/playlist/47E6FTIolKZ4NZIJH6zjun) 
 
-* [/r/indie_rock](https://open.spotify.com/playlist/4Yg4j3USgAPjd49b2Hnthb) 
+* [/r/numetal](https://open.spotify.com/playlist/6YtwogWsWglYGMkGXQHv72) 
 
-* [/r/MathRock](https://open.spotify.com/playlist/6TLYh3MqWS2HD3Es0tx5sq) 
+* [/r/poppunkers](https://open.spotify.com/playlist/1EfLwA0WyFY1KbvWD7brwU) 
 
-* [/r/melodicdeathmetal](https://open.spotify.com/playlist/4EwjjcdE2q44gCzcCHy7JK) 
+* [/r/PostHardcore](https://open.spotify.com/playlist/0OI4PyrjaoBxYUBujdUz4x) 
 
-* [/r/metal](https://open.spotify.com/playlist/0BuUojesHKG1x1SxwfbQvD) 
+* [/r/PostRock](https://open.spotify.com/playlist/5C1bXbuR3BiEOcVDYWmR8o) 
 
-* [/r/metalcore](https://open.spotify.com/playlist/0O09OyjlCESOqD84oKoD0G) 
+* [/r/powermetal](https://open.spotify.com/playlist/4TiLs3ptD5uQM3wcrWS1VQ) 
 
-* [/r/NewWave](https://open.spotify.com/playlist/4fo6W1lrlHYxKvCEf5orjd) 
+* [/r/ProgMetal](https://open.spotify.com/playlist/2cQFbqvEPzMmvqkqmdELT1) 
 
-* [/r/noiserock](https://open.spotify.com/playlist/2ieInvTROc9on6LNg2Q8zC) 
+* [/r/progrockmusic](https://open.spotify.com/playlist/6uvj9sxC0igy5y0RsX2wzs) 
 
-* [/r/numetal](https://open.spotify.com/playlist/4zyXR3YMjhNvB7VIOXW4Xw) 
+* [/r/PsychedelicRock](https://open.spotify.com/playlist/13V0D4WvMx4TbO341mUNaa) 
 
-* [/r/poppunkers](https://open.spotify.com/playlist/5faLWJ46h4fWOVWExLnvDz) 
+* [/r/punk](https://open.spotify.com/playlist/0AKXCcxdDmvBrxTfB8fHt6) 
 
-* [/r/PostHardcore](https://open.spotify.com/playlist/4zLIx3YVl70NbwTUFw03Pv) 
+* [/r/Punk_Rock](https://open.spotify.com/playlist/4TSJu9sXnYD31QJjXR7j1q) 
 
-* [/r/PostRock](https://open.spotify.com/playlist/68cRxMtpOsY8fHVE8jxRI5) 
+* [/r/Rock](https://open.spotify.com/playlist/4r0tr7c6hdyr8raoZStau8) 
 
-* [/r/powermetal](https://open.spotify.com/playlist/1RRAYJstZFY89Z2dGU24vY) 
+* [/r/shoegaze](https://open.spotify.com/playlist/5NJsIRly0LcYjViHjky1JT) 
 
-* [/r/ProgMetal](https://open.spotify.com/playlist/5uT98XSCwl8nk8bmhpnWV3) 
+* [/r/stonerrock](https://open.spotify.com/playlist/1Z2hPf6gGLvSfS9za6l15I) 
 
-* [/r/progrockmusic](https://open.spotify.com/playlist/4kVUKofOFa9aeGAjLphtjk) 
+* [/r/symphonicmetal](https://open.spotify.com/playlist/424ds98Lg4ZtOPGTHTwgE0) 
 
-* [/r/PsychedelicRock](https://open.spotify.com/playlist/6NCehY4g2TiKAB6tB9lV4M) 
+* [/r/OutlawCountry](https://open.spotify.com/playlist/61GlsZDaLMQskuAjj2THhv) 
 
-* [/r/punk](https://open.spotify.com/playlist/2ED1X924NjpmwyKlOOETDv) 
+##Hip-hop
+* [/r/90sHipHop](https://open.spotify.com/playlist/2hCPThgSMusHX5kEyxtWvH)  
 
-* [/r/Punk_Rock](https://open.spotify.com/playlist/5rjtyyxonm66tA4z0AZDJR) 
+* [/r/hiphopheads](https://open.spotify.com/playlist/1PtCtCffmfp84wG6sbEI0i) 
 
-* [/r/Rock](https://open.spotify.com/playlist/1bwim4yHDxLAlVVqu1am30) 
+* [/r/Rap](https://open.spotify.com/playlist/3vKOIn2DNWG9rDFzJm6oLm) 
 
-* [/r/shoegaze](https://open.spotify.com/playlist/0szoNBqH6MSSCoC11elR9n) 
+* [/r/trapmuzik](https://open.spotify.com/playlist/2Xg2cDpxNqCxGB9BE8pnH3) 
 
-* [/r/stonerrock](https://open.spotify.com/playlist/2nQGUTyNZU5HWT871fUO9E) 
+* [/r/ukhiphopheads](https://open.spotify.com/playlist/12sVvh8T8HaI4MPqDMlZo3) 
 
-* [/r/symphonicmetal](https://open.spotify.com/playlist/31957R0MuU8o6KaEth5S0F) 
+##Some decades
+* [/r/90sMusic](https://open.spotify.com/playlist/2vkvybsK5dfS6LgLQPOgM5) 
 
-* [/r/OutlawCountry](https://open.spotify.com/playlist/25nVbrimQYtT7PmXRHxcqJ) 
+* [/r/80sMusic](https://open.spotify.com/playlist/5qZP3JO93Eji8sCBywYUT5) 
 
-### Hip-hop
-* [/r/90sHipHop](https://open.spotify.com/playlist/3vTF4CcgTds8RaELUWzU51) 
+* [/r/70sMusic](https://open.spotify.com/playlist/4uBlIT7Ff1QWoPnoxulk3K) 
 
-* [/r/altrap](https://open.spotify.com/playlist/4p2yKHtdEUUagWqYfUfZ3y) 
+* [/r/60sMusic](https://open.spotify.com/playlist/6cEbB4eDNOK5gM9kMwaKAs) 
 
-* [/r/ChiefKeef](https://open.spotify.com/playlist/0bWeJ6O3eQZvQyihpC2FWz) 
+##By country/region/culture
+* [/r/Irishmusic](https://open.spotify.com/playlist/2CsijIFvi2uKvXUdCz0oBr) 
 
-* [/r/hiphopheads](https://open.spotify.com/playlist/4dzfjV5J860dfGDiaZwkwm) 
+* [/r/jpop](https://open.spotify.com/playlist/6EiTydI8j975A3OSitfeGv) 
 
-* [/r/Rap](https://open.spotify.com/playlist/5a21RZJeBNwwEyoVJtonom) 
+* [/r/kpop](https://open.spotify.com/playlist/3yOVrAdwOWgXzRUItD9nIr) 
 
-* [/r/trapmuzik](https://open.spotify.com/playlist/79vlAHb3fSG9CIb6jDqrsB) 
+* [/r/MoscowBeat](https://open.spotify.com/playlist/2L1TkiEByrCLe3FJdRcvF1) 
 
-* [/r/ukhiphopheads](https://open.spotify.com/playlist/0cY3XN2a0BF7lZjFVvjuDr) 
+* [/r/spop](https://open.spotify.com/playlist/23n2gUn58TeOkMXmwKvQzj)
 
-### Some decades
-* [/r/90sMusic](https://open.spotify.com/playlist/3fa5nWSVIYUPn80T5XxiiE) 
+##Other
+* [/r/animemusic](https://open.spotify.com/playlist/4DrZDba6KAJWppYTht9MRt) 
 
-* [/r/80sMusic](https://open.spotify.com/playlist/7BalfEYEmpnCLBqeu4XV28) 
+* [/r/chillmusic](https://open.spotify.com/playlist/1hBmZYfubwFaK7SP3KMXxU) 
 
-* [/r/70sMusic](https://open.spotify.com/playlist/55TtGx7Xz8f2pjypLCaxEs) 
+* [/r/chillwave](https://open.spotify.com/playlist/5QFulDcpaAwLZCt8b39g7Z) 
 
-* [/r/60sMusic](https://open.spotify.com/playlist/4huQuauG3S2LypOdqFsXIf) 
+* [/r/disco](https://open.spotify.com/playlist/4IHBwRjskR1LFl68iRNVRD) 
 
-### By country/region/culture
-* [/r/Irishmusic](https://open.spotify.com/playlist/1jyCTxyom6LYvO1KXaSVNp) 
+* [/r/DreamPop](https://open.spotify.com/playlist/0kWByLSU15t480T0Tik8hz) 
 
-* [/r/jpop](https://open.spotify.com/playlist/7hfQd4M01nbdeYGjTD8KtI) 
+* [/r/gamemusic](https://open.spotify.com/playlist/4bkko8Ee27aPksEt2Age1U) 
 
-* [/r/kpop](https://open.spotify.com/playlist/2Bg4BBmV0N1Uf3Gk0wGxol) 
+* [/r/IndieFolk](https://open.spotify.com/playlist/2vRWaG4Z1OSTStaXu5a6LY)
 
-* [/r/MoscowBeat](https://open.spotify.com/playlist/4yBed6jyrgoe9VATJFyOPQ) 
+* [/r/jazz](https://open.spotify.com/playlist/1yCETyc2S4cX6pY0B7U9aP) 
 
-* [/r/spop](https://open.spotify.com/playlist/0zaDAxDmEP6itDHdNUS9Mo) 
+* [/r/MusicForConcentration](https://open.spotify.com/playlist/7epDocbxh40emjhKKNy8GI) 
 
-* [/r/WorldMusic](https://open.spotify.com/playlist/1YXyIeJD5RQwtiT7gN8g7A) 
+* [/r/NuDisco](https://open.spotify.com/playlist/2de6SyH81kOHXbuC7CfAB7) 
 
-### Other
-* [/r/animemusic](https://open.spotify.com/playlist/5Bx2M7sWFgw9Kt3lrI4rCB) 
+* [/r/pianocovers](https://open.spotify.com/playlist/17jC0H7QQhHOVy8s3XJU2s) 
 
-* [/r/chillmusic](https://open.spotify.com/playlist/17HGUnvrVcXfbVwsXftZJU) 
+* [/r/popheads](https://open.spotify.com/playlist/1sQCfTs4doGjvozuFRlKrU) 
 
-* [/r/chillwave](https://open.spotify.com/playlist/2rIAaNNz1aMZNcUBfg1pFY) 
+* [/r/reggae](https://open.spotify.com/playlist/7H3ZM9Jj91zDqdJB01AKqk) 
 
-* [/r/disco](https://open.spotify.com/playlist/0vgel7cP8sP6zJ6tnLXJ1o) 
+* [/r/rnb](https://open.spotify.com/playlist/1ImkJIObc6oxcBLWKc3Ovv) 
 
-* [/r/DreamPop](https://open.spotify.com/playlist/6cKONSA1B74rHIfhaGn4RU) 
+* [/r/RnBHeads](https://open.spotify.com/playlist/1K5zDWRRryqLgQiCtgHQtV) 
 
-* [/r/gamemusic](https://open.spotify.com/playlist/6eMwF2AWOFvku5iKoomfQg) 
+* [/r/Ska](https://open.spotify.com/playlist/4ruFWmt9HpuIYFfqrSsMlo) 
 
-* [/r/IndieFolk](https://open.spotify.com/playlist/6Vr0vWn25e9MIgoiz6vMAo) 
+* [/r/SoundsVintage](https://open.spotify.com/playlist/3Nbw0YtBye7865BQ3xQsJL) 
 
-* [/r/jambands](https://open.spotify.com/playlist/49DhTaj1wsiOp456Ksdrn0) 
+* [/r/treemusic](https://open.spotify.com/playlist/5txSkW0nmawzY2PVsGxcaL) 
 
-* [/r/jazz](https://open.spotify.com/playlist/3YVNNymgIUU1p8XbAza6oy) 
+* [/r/triphop](https://open.spotify.com/playlist/40LBlRLNK3wwfLszEbdxZC) 
 
-* [/r/MusicForConcentration](https://open.spotify.com/playlist/73dOjgqZyuFtAnlILxuMIa) 
+* [/r/vaporwave](https://open.spotify.com/playlist/6gLUfgnqoWaHXks4LKvPLG) 
 
-* [/r/NuDisco](https://open.spotify.com/playlist/4E0n2UG4EjVyUHZPfKtdpX) 
-
-* [/r/pianocovers](https://open.spotify.com/playlist/7AwsvHuOsL86N1RTbaQRgF) 
-
-* [/r/popheads](https://open.spotify.com/playlist/0dbgCEDLJZxcsusHBrucIn) 
-
-* [/r/reggae](https://open.spotify.com/playlist/5MynYuMdPYlWjJJoMyf7B0) 
-
-* [/r/rnb](https://open.spotify.com/playlist/341Tfzh53RXFcnclSXD9AU) 
-
-* [/r/RnBHeads](https://open.spotify.com/playlist/5KAKYKgNAJYPX0VnxN29P8) 
-
-* [/r/Ska](https://open.spotify.com/playlist/4biC07jzzKCrra5nDdS4sJ) 
-
-* [/r/SoundsVintage](https://open.spotify.com/playlist/2IqONGZPgVg74aTnJyWu4H) 
-
-* [/r/treemusic](https://open.spotify.com/playlist/5sbOSLbxhZUzCuYEO9diyH) 
-
-* [/r/triphop](https://open.spotify.com/playlist/0LcqWMs0AnxMi7zLlMWuma) 
-
-* [/r/vaporwave](https://open.spotify.com/playlist/2O40haK5fSDM6ScakMkQsF) 
-
-* [/r/VintageObscura](https://open.spotify.com/playlist/4Ou2TEivelr4MvbbjiMiTN) 
+* [/r/VintageObscura](https://open.spotify.com/playlist/6BNJisuhenItSBS6IF3p8r) 
 
