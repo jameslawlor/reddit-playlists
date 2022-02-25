@@ -6,18 +6,19 @@ compiled automatically from the top posts of the past week for over 100 music su
 
 The full list is shown further down the page, feel free to explore and follow the playlists for your favourite subreddits.
 
-You can find out more about this project, the technical-side of the implementation and the source code [in the docs here](https://github.com/jameslawlor/reddit-playlists) or by clicking the View On Github tab above.
+You can find out more about this project, the technical side of the implementation and the source code [on the project page here](https://github.com/jameslawlor/reddit-playlists) or by clicking the View On Github tab above.
+You can contact me via [LinkedIn](https://www.linkedin.com/in/james-lawlor/) or [Twitter](https://twitter.com/lawlorino).
 
 ![img.png](img.png)
 
 # Playlists by genre
 
-###Classical music
+### Classical music
 * [/r/ElitistClassical](https://open.spotify.com/playlist/12WUWXpIraVeZEh5qrih3w) 
 
 * [/r/Opera](https://open.spotify.com/playlist/6QxeasH43NjykEPT44gEv5) 
 
-###Electronic music
+### Electronic music
 * [/r/ambientmusic](https://open.spotify.com/playlist/69XNatgudLjLW6JU0OmnUk) 
 
 * [/r/breakcore](https://open.spotify.com/playlist/7p9a3S43b3Qwt0nLvfWSw8) 
