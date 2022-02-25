@@ -6,8 +6,14 @@ compiled automatically from the top posts of the past week for over 100 music su
 
 The full list is shown further down the page, feel free to explore and follow the playlists for your favourite subreddits.
 
+These playlists will be updated on a weekly cadence.
+
 You can find out more about this project, the technical side of the implementation and the source code [on the project page here](https://github.com/jameslawlor/reddit-playlists) or by clicking the View On Github tab above.
 You can contact me via [LinkedIn](https://www.linkedin.com/in/james-lawlor/) or [Twitter](https://twitter.com/lawlorino).
+
+
+### Demo 
+Taking the top track submissions in the last week from /r/Rock and adding them to a Spotify playlist. In the below example 3 of the 4 submissions are detected by the program as valid tracks and are added to the corresponding subreddit's playlist.
 
 ![img.png](img.png)
 

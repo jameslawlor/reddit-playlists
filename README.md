@@ -10,6 +10,11 @@ There are hundreds of active music-related subreddits devoted to specific genres
  I decided to target the submissions that were for particular tracks, fortunately these are really common across all the music subreddits and the submissions generally follow a similar format and structure, an example is shown below.
 
 #### Example
+Taking the top track submissions in the last week from /r/Rock and adding them to a Spotify playlist. 
+In the below example 3 of the 4 submissions are detected by the program as valid tracks, and they each follow the basic `$ARTIST - $TRACK` convention. 
+ These are then searched for on Spotify and added to the corresponding subreddit's playlist.
+
+
  ![img.png](docs/img.png)
 
 ## Setup
