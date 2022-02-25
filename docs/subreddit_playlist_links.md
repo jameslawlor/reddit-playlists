@@ -1,4 +1,4 @@
-##Electronic music
+## Electronic music
 * [/r/ambientmusic](https://open.spotify.com/playlist/4XilaEY4NCiVviBZJNqZTM) 
 
 * [/r/breakcore](https://open.spotify.com/playlist/0dHmesP9twK4ag8p1ECFuP) 
@@ -59,7 +59,7 @@
 
 * [/r/trap](https://open.spotify.com/playlist/1cFUHRyngvIQLjswMjEUYZ) 
 
-##Rock/Metal
+## Rock/Metal
 * [/r/90sAlternative](https://open.spotify.com/playlist/4I18OCxZEt26FhsaLoZRD7) 
 
 * [/r/AlternativeRock](https://open.spotify.com/playlist/0Ucjfv55d3IFVi1pvICxZj) 
@@ -146,7 +146,7 @@
 
 * [/r/OutlawCountry](https://open.spotify.com/playlist/61GlsZDaLMQskuAjj2THhv) 
 
-##Hip-hop
+## Hip-hop
 * [/r/90sHipHop](https://open.spotify.com/playlist/2hCPThgSMusHX5kEyxtWvH) 
 
 * [/r/altrap](https://open.spotify.com/playlist/1N4P98YzcHMd2Fy2BYPzuI) 
@@ -161,7 +161,7 @@
 
 * [/r/ukhiphopheads](https://open.spotify.com/playlist/12sVvh8T8HaI4MPqDMlZo3) 
 
-##Some decades
+## Some decades
 * [/r/90sMusic](https://open.spotify.com/playlist/2vkvybsK5dfS6LgLQPOgM5) 
 
 * [/r/80sMusic](https://open.spotify.com/playlist/5qZP3JO93Eji8sCBywYUT5) 
@@ -170,7 +170,7 @@
 
 * [/r/60sMusic](https://open.spotify.com/playlist/6cEbB4eDNOK5gM9kMwaKAs) 
 
-##By country/region/culture
+## By country/region/culture
 * [/r/Irishmusic](https://open.spotify.com/playlist/2CsijIFvi2uKvXUdCz0oBr) 
 
 * [/r/jpop](https://open.spotify.com/playlist/6EiTydI8j975A3OSitfeGv) 
@@ -183,7 +183,7 @@
 
 * [/r/WorldMusic](https://open.spotify.com/playlist/2tLym16YvQGycxUyTeN6Im) 
 
-##Other
+## Other
 * [/r/animemusic](https://open.spotify.com/playlist/4DrZDba6KAJWppYTht9MRt) 
 
 * [/r/chillmusic](https://open.spotify.com/playlist/1hBmZYfubwFaK7SP3KMXxU) 
