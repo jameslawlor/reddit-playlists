@@ -11,7 +11,7 @@ def get_reddit_client():
     else:
         cli = Reddit(
             client_id=os.getenv("reddit_client_id"),
-            client_scecret=os.getenv("reddit_client_secret"),
+            client_secret=os.getenv("reddit_client_secret"),
             user_agent=os.getenv("reddit_user_agent"),
         )
 
