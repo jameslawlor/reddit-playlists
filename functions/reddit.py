@@ -1,5 +1,21 @@
 import re
 from functions.base_logger import logger
+import os
+from praw import Reddit
+
+
+def get_reddit_client():
+
+    if os.path.exists("praw.ini"):
+        cli = Reddit("bot1")
+    else:
+        cli = Reddit(
+            client_id=os.getenv["praw_client_id"],
+            client_scecret=os.getenv["praw_client_secret"],
+            user_agent=os.getenv["praw_user_agent"],
+        )
+
+    return cli
 
 
 def get_wikipage(reddit_instance) -> list:

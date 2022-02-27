@@ -3,15 +3,21 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 from functions.base_logger import logger
 import re
+import os
 
 
 def get_spotipy_client():
 
-    config = configparser.ConfigParser()
-    config.read("spotipy.cfg")
-    client_id = config.get("SPOTIFY", "CLIENT_ID")
-    client_secret = config.get("SPOTIFY", "CLIENT_SECRET")
-    username = config.get("SPOTIFY", "USERNAME")
+    if os.path.exists("spotipy.cfg"):
+        config = configparser.ConfigParser()
+        config.read("spotipy.cfg")
+        client_id = config.get("SPOTIFY", "CLIENT_ID")
+        client_secret = config.get("SPOTIFY", "CLIENT_SECRET")
+        username = config.get("SPOTIFY", "USERNAME")
+    else:
+        client_id = os.getenv["spotipy_client_id"]
+        client_secret = os.getenv["spotipy_client_secret"]
+        username = os.getenv["spotipy_client_username"]
 
     scope = ("playlist-modify-public",)
     client_credentials_manager = SpotifyClientCredentials(
