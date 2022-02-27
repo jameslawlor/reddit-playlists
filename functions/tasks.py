@@ -4,6 +4,7 @@ from functions.reddit import (
     get_subreddit_weekly_top_posts,
     filter_submissions_matching_track_format,
     get_artists_and_tracks_from_submissions,
+    get_reddit_client,
 )
 from functions.spotipy import (
     get_spotipy_client,
@@ -23,7 +24,6 @@ from functions.filetools import (
 )
 from functions.base_logger import logger
 
-from praw import Reddit
 import datetime
 import os
 import time
@@ -40,7 +40,7 @@ def get_subreddits_and_genres(
     test_mode,
     save_data,
 ):
-    reddit_instance = Reddit("bot1")
+    reddit_instance = get_reddit_client()
     subreddits_and_genres = get_subreddit_genre_mapping(
         reddit_instance,
         genre_section_start_regex,
@@ -162,7 +162,7 @@ def update_playlists(
 ):
 
     spotipy, spotify_username = get_spotipy_client()
-    reddit = Reddit("bot1")
+    reddit = get_reddit_client()
     subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
 
     for subreddit, info in subreddit_data.items():
