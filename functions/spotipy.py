@@ -30,6 +30,7 @@ def get_spotipy_client():
         client_id=client_id,
         client_secret=client_secret,
         redirect_uri="http://localhost:8888/callback/",
+        open_browser=False,
     )
 
     sp = spotipy.Spotify(
