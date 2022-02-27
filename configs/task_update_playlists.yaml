@@ -1,6 +1,7 @@
 task: "update_playlists"
 max_playlist_length: 20
-input_dir: "data/subreddit_playlist_mapping"
+input_dir: ""
+input_file: "subreddit_playlist_mapping.json"
 n_top_posts_to_check: 500
 # A Reddit submission will be checked on Spotify if it fits the below pattern (track submissions generally use 'ARTIST - TRACK NAME')
 post_regex_pattern: '[-—]+'
