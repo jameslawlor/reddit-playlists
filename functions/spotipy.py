@@ -15,9 +15,9 @@ def get_spotipy_client():
         client_secret = config.get("SPOTIFY", "CLIENT_SECRET")
         username = config.get("SPOTIFY", "USERNAME")
     else:
-        client_id = os.getenv["spotipy_client_id"]
-        client_secret = os.getenv["spotipy_client_secret"]
-        username = os.getenv["spotipy_client_username"]
+        client_id = os.getenv("spotipy_client_id")
+        client_secret = os.getenv("spotipy_client_secret")
+        username = os.getenv("spotipy_client_username")
 
     scope = ("playlist-modify-public",)
     client_credentials_manager = SpotifyClientCredentials(
