@@ -24,3 +24,5 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
+        env:
+          SPOTIPY_CLIENT_ID:  ${{ secrets.SPOTIPY_CLIENT_ID }}
