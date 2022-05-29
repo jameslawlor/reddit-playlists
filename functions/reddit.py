@@ -10,9 +10,9 @@ def get_reddit_client():
         cli = Reddit("bot1")
     else:
         cli = Reddit(
-            client_id=os.getenv("reddit_client_id"),
-            client_secret=os.getenv("reddit_client_secret"),
-            user_agent=os.getenv("reddit_user_agent"),
+            client_id=os.getenv("PRAW_CLIENT_ID"),
+            client_secret=os.getenv("PRAW_CLIENT_SECRET"),
+            user_agent=os.getenv("PRAW_USER_AGENT"),
         )
 
     return cli
