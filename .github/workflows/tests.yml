@@ -27,5 +27,5 @@ jobs:
         env:
           SPOTIPY_CLIENT_ID:  ${{ secrets.SPOTIPY_CLIENT_ID }}
           SPOTIPY_CLIENT_SECRET:  ${{ secrets.SPOTIPY_CLIENT_SECRET }}
-          PRAW_CLIENT_ID:  ${{ secrets.PRAW_CLIENT_ID }}
-          PRAW_CLIENT_SECRET:  ${{ secrets.PRAW_CLIENT_SECRET }}
+          CLIENT_ID:  ${{ secrets.PRAW_CLIENT_ID }}
+          CLIENT_SECRET:  ${{ secrets.PRAW_CLIENT_SECRET }}
