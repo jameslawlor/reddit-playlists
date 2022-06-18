@@ -28,6 +28,7 @@ import datetime
 import os
 import time
 import pandas as pd
+import tqdm
 
 
 def get_subreddits_and_genres(
@@ -165,7 +166,7 @@ def update_playlists(
     reddit = get_reddit_client()
     subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
 
-    for subreddit, info in subreddit_data.items():
+    for subreddit, info in tqdm.tqdm(subreddit_data.items()):
         playlist_id = info["id"]
         clear_playlist(spotipy, spotify_username, playlist_id)
         # # Get top weekly from Reddit

@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
-
+        python-version: [3.8]
+    environment: actions_credentials
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -24,3 +24,9 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
+        env:
+          SPOTIPY_CLIENT_ID:  ${{ secrets.SPOTIPY_CLIENT_ID }}
+          SPOTIPY_CLIENT_SECRET:  ${{ secrets.SPOTIPY_CLIENT_SECRET }}
+          PRAW_CLIENT_ID:  ${{ secrets.PRAW_CLIENT_ID }}
+          PRAW_CLIENT_SECRET:  ${{ secrets.PRAW_CLIENT_SECRET }}
+          PRAW_USER_AGENT:  ${{ secrets.PRAW_USER_AGENT }}
