@@ -4,7 +4,7 @@
 
 The full list is shown further down the page, feel free to explore and follow the playlists for your favourite subreddits.
 
-These playlists will be refreshed on a weekly cadence.
+These playlists will be refreshed on a weekly cadence, every Sunday at midnight UTC.
 
 You can find out more about this project, the technical side of the implementation and the source code [on the project page here](https://github.com/jameslawlor/reddit-playlists) or by clicking the View On Github tab above.
 You can contact me via [LinkedIn](https://www.linkedin.com/in/james-lawlor/) or [Twitter](https://twitter.com/lawlorino).
