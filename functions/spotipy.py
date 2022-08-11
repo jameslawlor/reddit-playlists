@@ -4,6 +4,7 @@ from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 from functions.base_logger import logger
 import re
 import os
+import requests
 
 
 def get_spotipy_client():
@@ -182,7 +183,12 @@ def clear_playlist(spotipy, spotify_username, playlist_id):
 
 def spotify_search(spotify, artist, track):
     query = "artist:" + artist + " track:" + track
-    return spotify.search(query, type="track")["tracks"]
+    try:
+        search_results = spotify.search(query, type="track")["tracks"]
+    except Exception as e:
+        logger.info(f"{e}")
+        search_results = {"total": 0}
+    return search_results
 
 
 def search_spotify_for_artists_and_tracks(
