@@ -1,4 +1,3 @@
-task: "update_playlists"
 max_playlist_length: 20
 input_dir: "data/subreddit_playlist_mapping"
 input_file: "" # Get most recent json in subreddit_playlist_mapping directory
