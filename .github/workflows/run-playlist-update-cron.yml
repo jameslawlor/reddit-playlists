@@ -1,0 +1,15 @@
+name: run-playlist-update-cron
+on:
+  schedule:
+    - cron: "0 0 * * 0" # Run at midnight every Sunday
+jobs:
+  update-playlists:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🐍 Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Run update_playlists task
+        run: python main.py --task update_playlists
