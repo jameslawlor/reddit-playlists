@@ -1,4 +1,3 @@
-task: "create_empty_playlists"
 # Take only subreddits that fit in these specific genres on the /r/Music wiki page
 genres_whitelist: ['Some decades', 'Electronic music', 'By country/region/culture', 'Other', 'Hip-hop', 'Rock/Metal', 'Any genre',]
 # Exclude specific subreddits, can be useful if for example it's mainly for chat/discussion and not posting tracks

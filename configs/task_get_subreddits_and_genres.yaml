@@ -1,4 +1,3 @@
-task: "get_subreddits_and_genres"
 genre_section_start_regex: "#Subreddits by genre.*"
 genre_section_end_regex: "#Multi-genre & community subreddits.*"
 genre_regex: "##.*"

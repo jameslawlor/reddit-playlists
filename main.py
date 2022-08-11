@@ -13,8 +13,9 @@ logging.getLogger().setLevel(logging.INFO)
 
 if __name__ == "__main__":
 
-    config = get_config()
-    task = config["task"]
+    config, args = get_config()
+    task = args.task
+    test_mode_enabled = args.test_mode_enabled
 
     if task == "get_subreddits_and_genres":
         get_subreddits_and_genres(
@@ -49,6 +50,7 @@ if __name__ == "__main__":
             n_top_posts_to_check=config["n_top_posts_to_check"],
             post_regex_pattern=config["post_regex_pattern"],
             allowed_domains=config["allowed_domains"],
+            test_mode=test_mode_enabled,
         )
     elif task == "generate_subreddit_playlist_links_markdown_file":
         generate_subreddit_playlist_links_markdown_file(

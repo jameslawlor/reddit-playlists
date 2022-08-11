@@ -1,6 +1,6 @@
 praw.ini
 spotipy.cfg
-data/
+#data/
 .pre-commit-config.yaml
 .flake8
 .DS_Store

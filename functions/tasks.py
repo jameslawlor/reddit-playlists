@@ -160,11 +160,18 @@ def update_playlists(
     n_top_posts_to_check,
     post_regex_pattern,
     allowed_domains,
+    test_mode,
 ):
 
     spotipy, spotify_username = get_spotipy_client()
     reddit = get_reddit_client()
     subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
+
+    if test_mode:
+        test_subreddit = list(subreddit_data.keys())[0]
+        test_info = subreddit_data[test_subreddit]
+        subreddit_data = {test_subreddit: test_info}
+        logger.info(f"TEST MODE ENABLED, UPDATING PLAYLIST FOR {test_subreddit}")
 
     for subreddit, info in tqdm.tqdm(subreddit_data.items()):
         playlist_id = info["id"]
