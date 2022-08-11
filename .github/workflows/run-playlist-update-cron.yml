@@ -7,10 +7,18 @@ jobs:
   update-playlists:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+
       - name: 🐍 Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: 3.8
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install flake8 pytest
+              if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run update_playlists task
         run: python main.py --task update_playlists
