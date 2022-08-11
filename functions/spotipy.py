@@ -15,28 +15,36 @@ def get_spotipy_client():
         client_id = config.get("SPOTIFY", "CLIENT_ID")
         client_secret = config.get("SPOTIFY", "CLIENT_SECRET")
         username = config.get("SPOTIFY", "USERNAME")
+        token = None
     else:
         client_id = os.getenv("spotipy_client_id")
         client_secret = os.getenv("spotipy_client_secret")
         username = os.getenv("spotipy_client_username")
+        token = os.getenv("spotipy_user_token")
 
-    scope = ("playlist-modify-public",)
-    client_credentials_manager = SpotifyClientCredentials(
-        client_id=client_id,
-        client_secret=client_secret,
-    )
-    auth_manager = SpotifyOAuth(
-        scope=scope,
-        username=username,
-        client_id=client_id,
-        client_secret=client_secret,
-        redirect_uri="http://localhost:8888/callback/",
-        open_browser=False,
-    )
+    if token:
+        logger.info("Spotify user token found, authenticating with token")
+        sp = spotipy.Spotify(auth=token)
+    else:
+        logger.info("Spotify user token not found, using browser authentication")
+        scope = ("playlist-modify-public",)
+        client_credentials_manager = SpotifyClientCredentials(
+            client_id=client_id,
+            client_secret=client_secret,
+        )
+        auth_manager = SpotifyOAuth(
+            scope=scope,
+            username=username,
+            client_id=client_id,
+            client_secret=client_secret,
+            redirect_uri="http://localhost:8888/callback/",
+            open_browser=False,
+        )
 
-    sp = spotipy.Spotify(
-        client_credentials_manager=client_credentials_manager, auth_manager=auth_manager
-    )
+        sp = spotipy.Spotify(
+            client_credentials_manager=client_credentials_manager,
+            auth_manager=auth_manager,
+        )
 
     return sp, username
 
