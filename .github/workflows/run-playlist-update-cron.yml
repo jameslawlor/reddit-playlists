@@ -1,5 +1,6 @@
 name: run-playlist-update-cron
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * 0" # Run at midnight every Sunday
 jobs:
