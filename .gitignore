@@ -5,6 +5,7 @@ spotipy.cfg
 .flake8
 .DS_Store
 .cache-jalawlor
+.cache-jalawlor-backup
 .idea/
 
 # Byte-compiled / optimized / DLL files
