@@ -49,20 +49,35 @@ Add these to the project root directory
 
  The settings for these tasks are contained in the corresponding `.yaml` files in `configs/`.
 
+## Automation
+
+The playlist updating is scheduled to run weekly via Github Actions and can be triggered manually. 
+See code in the `.github/workflows` directory. 
+It's also easy to set up email notifications in the event this fails through the Github UI.
+
 ## Current issues and future development
-
-There are a couple of issues where the wrong tracks can be added or valid tracks missed completely for various reasons,
-mainly because of the difficulty in handling the variability in submission format and due to remixes or covers and so on.
- Future development will probably focus on improving these problems.
-
-At some point I would like to add support for archiving past playlists, currently they are overwritten entirely. 
-I also think it could be useful to provide monthly top tracks for smaller subreddits that don't get many submissions.  
 
 This is an open project so if you spot a way to improve anything feel free to create a PR :)
 
+- There are a couple of issues where the wrong tracks can be added or valid tracks missed completely for various reasons,
+mainly because of the difficulty in handling the variability in submission format and due to remixes or covers and so on.
+ Future development will probably focus on improving these problems.
+
+- At some point I would like to add support for archiving past playlists, currently they are overwritten entirely. 
+I also think it could be useful to provide monthly top tracks for smaller subreddits that don't get many submissions.  
+
+- Authentication with Spotify during the weekly cron job run is currently handled 
+in a very hacky way due to the API credentials flow. 
+Because the job runs via Github Actions and is containerised (can't save state in memory between runs) and is headless, the recommended authentication
+method would require user intervention and a browser redirect (manually copy pasting a URL essentially).
+After trying a few alternatives the only authentication method I found that seems to be compatible with this setup is to synthesise a cache 
+file identical to what would be created if running locally.
+The script then reads from this (synthesised) cache by default and the user token is refreshed automatically.
+There is probably a smarter way so if you have any ideas please let me know.
+
 ## About
 
- **reddit-playlists** is created and maintained by me, James Lawlor. 
+ **reddit-playlists** is created and maintained by James Lawlor. 
  You can contact me via [LinkedIn](https://www.linkedin.com/in/james-lawlor/) or [Twitter](https://twitter.com/lawlorino).
 
 ## License
