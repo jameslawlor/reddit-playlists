@@ -29,6 +29,7 @@ jobs:
           spotipy_client_secret: ${{ secrets.SPOTIPY_CLIENT_SECRET }}
           spotipy_client_username: ${{ secrets.SPOTIPY_CLIENT_USERNAME }}
           spotipy_user_token: ${{ secrets.SPOTIFY_USER_TOKEN }}
+          spotipy_refresh_token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           PRAW_CLIENT_ID: ${{ secrets.PRAW_CLIENT_ID }}
           PRAW_CLIENT_SECRET: ${{ secrets.PRAW_CLIENT_SECRET }}
           PRAW_USER_AGENT: ${{ secrets.PRAW_USER_AGENT }}
