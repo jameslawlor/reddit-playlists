@@ -8,3 +8,4 @@ output_dir: "data/subreddit_playlist_mapping"
 subscriber_min_count: 10000 # do not create subreddits with fewer than this number of subscribers
 playlist_base_str: '/r/{} top weekly tracks'
 filename_format: "{date:%Y%m%d_%H%M%S}.json"
+auth_method: "client_credentials_flow"

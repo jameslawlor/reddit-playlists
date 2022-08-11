@@ -61,12 +61,13 @@ def get_subreddits_and_genres(
 
 def delete_playlists(
     playlist_base_str,
+    auth_method,
 ):
     """
     Deletes all spotify playlists for user that match input playlist string
     """
 
-    spotipy, spotify_username = get_spotipy_client()
+    spotipy, spotify_username = get_spotipy_client(auth_method)
     existing_playlists = get_existing_playlists(
         spotify_username, spotipy, playlist_base_str
     )
@@ -90,9 +91,10 @@ def create_empty_playlists(
     output_dir,
     filename_format,
     subscriber_min_count,
+    auth_method,
 ):
 
-    spotipy, spotify_username = get_spotipy_client()
+    spotipy, spotify_username = get_spotipy_client(auth_method)
     subreddit_genre_sub_counts = load_subreddit_genre_sub_counts(
         input_dir=input_dir, input_file=input_file
     )
@@ -161,9 +163,10 @@ def update_playlists(
     post_regex_pattern,
     allowed_domains,
     test_mode,
+    auth_method,
 ):
 
-    spotipy, spotify_username = get_spotipy_client()
+    spotipy, spotify_username = get_spotipy_client(auth_method)
     reddit = get_reddit_client()
     subreddit_data = load_subreddit_genre_sub_counts(input_dir=input_dir, input_file="")
 

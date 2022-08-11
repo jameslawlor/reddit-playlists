@@ -38,10 +38,12 @@ if __name__ == "__main__":
             output_dir=config["output_dir"],
             subscriber_min_count=config["subscriber_min_count"],
             filename_format=config["filename_format"],
+            auth_method=config["auth_method"],
         )
     elif task == "delete_playlists":
         delete_playlists(
             playlist_base_str=config["playlist_base_str"],
+            auth_method=config["auth_method"],
         )
     elif task == "update_playlists":
         update_playlists(
@@ -51,6 +53,7 @@ if __name__ == "__main__":
             post_regex_pattern=config["post_regex_pattern"],
             allowed_domains=config["allowed_domains"],
             test_mode=test_mode_enabled,
+            auth_method=config["auth_method"],
         )
     elif task == "generate_subreddit_playlist_links_markdown_file":
         generate_subreddit_playlist_links_markdown_file(

@@ -1,1 +1,2 @@
 playlist_base_str: '/r/{} top weekly tracks'
+auth_method: "client_credentials_flow"

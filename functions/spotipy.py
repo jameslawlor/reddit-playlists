@@ -7,7 +7,7 @@ import os
 import requests
 
 
-def get_spotipy_client():
+def get_spotipy_client(auth_method):
 
     if os.path.exists("spotipy.cfg"):
         config = configparser.ConfigParser()
@@ -22,11 +22,13 @@ def get_spotipy_client():
         username = os.getenv("spotipy_client_username")
         token = os.getenv("spotipy_user_token")
 
-    if token:
-        logger.info("Spotify user token found, authenticating with token")
+    logger.info(f"Authenticating with spotify using {auth_method}")
+    if auth_method == "token":
         sp = spotipy.Spotify(auth=token)
-    else:
-        logger.info("Spotify user token not found, using browser authentication")
+    elif auth_method == "client_credentials_flow":
+        auth_manager = SpotifyClientCredentials()
+        sp = spotipy.Spotify(auth_manager=auth_manager)
+    elif auth_method == "client_authorization_code_flow":
         scope = ("playlist-modify-public",)
         client_credentials_manager = SpotifyClientCredentials(
             client_id=client_id,
@@ -45,6 +47,53 @@ def get_spotipy_client():
             client_credentials_manager=client_credentials_manager,
             auth_manager=auth_manager,
         )
+    elif "synthesise_cache":
+        """
+        Hacky but out of better ideas...
+        """
+        access_token = os.getenv("spotipy_user_token")
+        refresh_token = os.getenv("spotipy_refresh_token")
+        token_type = "Bearer"
+        expires_in = 3600
+        scope = "playlist-modify-public"
+        expires_at = 1660208317
+        synthesised_dict_for_cache = {
+            "access_token": access_token,
+            "refresh_token": refresh_token,
+            "token_type": token_type,
+            "expires_in": expires_in,
+            "scope": scope,
+            "expires_at": expires_at,
+        }
+        cache_path = f".cache-{username}"
+
+        import json
+
+        with open(cache_path, "w") as file:
+            file.write(json.dumps(synthesised_dict_for_cache))
+
+        auth_manager = SpotifyOAuth(
+            scope=scope,
+            username=username,
+            client_id=client_id,
+            client_secret=client_secret,
+            cache_path=cache_path,
+            redirect_uri="missing",
+        )
+
+        client_credentials_manager = SpotifyClientCredentials(
+            client_id=client_id,
+            client_secret=client_secret,
+        )
+
+        sp = spotipy.Spotify(
+            client_credentials_manager=client_credentials_manager,
+            auth_manager=auth_manager,
+        )
+
+    else:
+
+        raise Exception
 
     return sp, username
 
