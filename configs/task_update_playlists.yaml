@@ -5,3 +5,4 @@ n_top_posts_to_check: 500
 # A Reddit submission will be checked on Spotify if it fits the below pattern (track submissions generally use 'ARTIST - TRACK NAME')
 post_regex_pattern: '[-—]+'
 allowed_domains: ['spotify', 'youtu', 'soundcloud'] # filter submissions that contain links to these domain names
+auth_method: "synthesise_cache"
