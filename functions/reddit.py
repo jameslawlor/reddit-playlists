@@ -177,8 +177,9 @@ def does_submission_match_track_format(
 
     # remove strings enclosed in brackets, sometimes extra info like Year of release, album, country, etc.
     stripped_submission = re.sub(r"[\(\[].*?[\)\]]", "", submission_title)
+    regex_match = re.search(regex_pattern, stripped_submission)
 
-    if (domain_match) and (re.search(regex_pattern, stripped_submission)):
+    if (domain_match) and (regex_match):
         return True
     else:
         return False
